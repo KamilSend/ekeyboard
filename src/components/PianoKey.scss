@@ -1,0 +1,21 @@
+.pianoKey{
+    min-width: 5vw;
+    min-height: 25vh;
+    background-color: white;
+    border:1px solid lightgray;
+    border-radius: 6px;
+    outline:none;
+    box-shadow: 0 5px 0 0 lightgrey;
+
+    &:active{
+        transform: translateY(5px);
+        box-shadow: 0 0 0 0 lightgrey;
+
+    }
+  }
+
+button.pressed{
+  transform: translateY(5px);
+  box-shadow: 0 0 0 0 lightgrey;
+}
+
