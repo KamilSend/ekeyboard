@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cd36a276b28dbdd27d3549f135bb0275",
+    "revision": "b6610e3bea8b7f217bba7cd7fe76baeb",
     "url": "/ekeyboard/index.html"
   },
   {
-    "revision": "49f8bb4703ff4e177e74",
-    "url": "/ekeyboard/static/css/main.d1b05096.chunk.css"
+    "revision": "d10b7a0ea93ea935c8e7",
+    "url": "/ekeyboard/static/css/main.a706dd10.chunk.css"
   },
   {
-    "revision": "9564401ec33b9ed2487d",
-    "url": "/ekeyboard/static/js/2.3b756ade.chunk.js"
+    "revision": "3eec511a189a42f9b8a6",
+    "url": "/ekeyboard/static/js/2.4f8b4c75.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/ekeyboard/static/js/2.3b756ade.chunk.js.LICENSE.txt"
+    "url": "/ekeyboard/static/js/2.4f8b4c75.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "49f8bb4703ff4e177e74",
-    "url": "/ekeyboard/static/js/main.24af8032.chunk.js"
+    "revision": "d10b7a0ea93ea935c8e7",
+    "url": "/ekeyboard/static/js/main.eab0ca09.chunk.js"
   },
   {
     "revision": "9a90d47f0da1f85d8540",
@@ -50,9 +50,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ed6e3a4a93c27a31edac03071b55fae4",
     "url": "/ekeyboard/static/media/H.ed6e3a4a.wav"
-  },
-  {
-    "revision": "5d5d9eefa31e5e13a6610d9fa7a283bb",
-    "url": "/ekeyboard/static/media/logo.5d5d9eef.svg"
   }
 ]);
