@@ -39,6 +39,14 @@ class App extends React.Component{
         ]
     }
 
+    handleClick = (event) => {
+        sounds.forEach(beep => {
+            if (event.target.textContent === beep.id) {
+                beep.sound.play()
+            }
+        })
+    }
+
     handleKeyPress = (event) => {
 
         sounds.forEach(beep => {
@@ -103,7 +111,13 @@ class App extends React.Component{
                 <span>A A G G F</span><br/>
                 <span>Ee i ee i o</span><br/>
 
-                <PianoKeys buttonPressed={this.state.buttonPressed}/>
+                <PianoKeys handleClick={this.handleClick} buttonPressed={this.state.buttonPressed}/>
+
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <span>Wersja robocza, żeby zacząć grać trzeba kliknąć dowolny klawisz a potem używać klawiatury</span>
             </div>
         );
     }

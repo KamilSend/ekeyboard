@@ -16,19 +16,17 @@
 //
 // export default PianoKey
 
-//TODO: przerobić na komponent stanowy, uzależnić wygląd od wciśnięcia klawisza
-//najpierw spróbować zrobić funkcje która jest uzależniona od stanu "pressed"
+
 import React from 'react'
 import './PianoKey.scss'
 
 class PianoKey extends React.Component{
 
-    render(){
-        console.log(this.props.descriptions.pressed)
-        return(
 
+    render(){
+        return(
             this.props.descriptions.pressed?<button className="pianoKey pressed">{this.props.descriptions.value}</button>:(
-                <button className="pianoKey">{this.props.descriptions.value}</button>)
+                <button onClick={this.props.handleClick}  className="pianoKey">{this.props.descriptions.value}</button>)
         )
     }
 }
