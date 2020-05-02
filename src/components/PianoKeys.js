@@ -1,14 +1,13 @@
 import React from 'react'
 import PianoKey from "./PianoKey";
 
-const descriptions = ['C','D','E','F','G','A','H']
 
-const PianoKeys = () => {
+const PianoKeys = (props) => {
+
     return(
-
-        descriptions.map(description =>(
-            <PianoKey descriptions={description}/>
-        ))
+        props.buttonPressed.map(description =>(
+        <PianoKey descriptions={description}/>
+    ))
 
     )
 }

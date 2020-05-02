@@ -27,18 +27,64 @@ const sounds = [
 
 class App extends React.Component{
 
+    state = {
+        buttonPressed:[
+            {id:"0", value:"c", pressed:false},
+            {id:"1", value:"d", pressed:false},
+            {id:"2", value:"e", pressed:false},
+            {id:"3", value:"f", pressed:false},
+            {id:"4", value:"g", pressed:false},
+            {id:"5", value:"a", pressed:false},
+            {id:"6", value:"h", pressed:false},
+        ]
+    }
+
     handleKeyPress = (event) => {
 
         sounds.forEach(beep => {
             if (event.key === beep.id) {
                 beep.sound.play()
             }
+        }) //ma się odtworzyć dźwięk, absolutnie niezbędne
+
+        const buttonPressed = [...this.state.buttonPressed]
+        const buttonPressed2 =[]//kopia stanu i pusta tablica do której będą pushowane wyfolsowane elementy
+
+        buttonPressed.forEach(beep => {
+            beep = {id:beep.id, value:beep.value, pressed:false}
+            buttonPressed2.push(beep)
+
+            if (event.key === beep.value) {
+                let active = buttonPressed2.slice(beep.id,beep.id*1 + 1)
+                active = {id:beep.id, value:beep.value, pressed:true}
+                buttonPressed2[beep.id] = active
+                this.setState({
+                    buttonPressed:buttonPressed2
+                })
+            }
         })
     }
 
+    handleKeyUp = () => {
+
+            this.setState({
+                buttonPressed:[
+                    {id:"0", value:"c", pressed:false},
+                    {id:"1", value:"d", pressed:false},
+                    {id:"2", value:"e", pressed:false},
+                    {id:"3", value:"f", pressed:false},
+                    {id:"4", value:"g", pressed:false},
+                    {id:"5", value:"a", pressed:false},
+                    {id:"6", value:"h", pressed:false},
+                ]
+            })
+    }
+
+
     render(){
+        //console.log(this.state.buttonPressed)
         return (
-            <div className="App" onKeyPress={this.handleKeyPress}>
+            <div className="App" onKeyPress={this.handleKeyPress} onKeyUp={this.handleKeyUp}>
                 <span>G E E F D D C E G</span><br/>
                 <span>Wlazł kotek na płotek i mruga,</span><br/>
                 <span>G E E F D D C E C</span><br/>
@@ -57,7 +103,7 @@ class App extends React.Component{
                 <span>A A G G F</span><br/>
                 <span>Ee i ee i o</span><br/>
 
-                <PianoKeys/>
+                <PianoKeys buttonPressed={this.state.buttonPressed}/>
             </div>
         );
     }
