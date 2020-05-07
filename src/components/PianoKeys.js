@@ -6,7 +6,7 @@ const PianoKeys = (props) => {
 
     return(
         props.buttonPressed.map(description =>(
-        <PianoKey handleClick={props.handleClick} descriptions={description}/>
+        <PianoKey handleClick={props.handleClick} descriptions={description} />
     ))
 
     )

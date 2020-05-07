@@ -1,3 +1,20 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 600px) { @content };
+  }
+
+  @if $breakpoint == phone-land {
+    @media only screen and (max-height: 450px) { @content };
+  }
+
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 800px) { @content };
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 1000px) { @content };
+  }
+}
+
 .pianoKey{
     min-width: 5vw;
     min-height: 25vh;
@@ -6,6 +23,15 @@
     border-radius: 6px;
     outline:none;
     box-shadow: 0 5px 0 0 lightgrey;
+    transition: .1s;
+
+  @include respond(tab-port){
+    min-width: 10vw;
+  }
+
+  @include respond(phone){
+    min-width: 13.5vw;
+  }
 
     &:active{
         transform: translateY(5px);
@@ -17,7 +43,7 @@
 button.pressed{
   transform: translateY(5px);
   box-shadow: 0 0 0 0 lightgrey;
-  //animation: App-logo-spin  .05s linear;
+  //animation: App-logo-spin  1s linear;
 }
 
 //@keyframes App-logo-spin {
