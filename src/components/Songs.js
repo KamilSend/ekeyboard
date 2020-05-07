@@ -8,11 +8,14 @@ const list = [
     {name: "Miała baba koguta", path: "/Miala_baba_koguta"},
 ]
 
-const Songs = () => {
+
+const Songs = (props) => {
+
+
 
     const songMenu = list.map(item => (
         <li key={item.name}>
-            <NavLink to={item.path} exact={item.exact?item.exact:false}>{item.name}</NavLink>
+            <NavLink onClick={props.handleNavLinkClick} onClick={props.handleNavLinkClick} to={item.path} exact={item.exact?item.exact:false}>{item.name}</NavLink>
         </li>
     ))
 

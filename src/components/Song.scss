@@ -1,0 +1,80 @@
+$base-color: #c6538c;
+$lettersYup:-35vh;
+$lettersYdown:1200px;
+
+.animationLettersWrapper{
+  display: flex;
+  flex-direction: column-reverse;
+  //transform:translateY(-100vh);
+  max-height:35vh;
+  overflow: hidden;
+}
+
+.animationLetter{
+  padding:10px;
+}
+
+.C{
+  transform: translate(-15vw, $lettersYup);
+  animation: CDown  9s linear
+}
+
+.D{
+  transform: translate(-10vw, $lettersYup);
+  animation: DDown  9s linear
+}
+
+.E{
+  transform: translate(-5vw, $lettersYup);
+  animation: DDown  9s linear
+}
+
+.F{
+  transform: translate(0, $lettersYup);
+  animation: FDown  9s linear
+}
+
+.G{
+  transform: translate(5vw, $lettersYup);
+  animation: GDown  9s linear
+}
+
+.A{
+  transform: translate(10vw, $lettersYup);
+  animation: ADown  9s linear
+}
+
+.H{
+  transform: translate(15vw, $lettersYup);
+  animation: ADown  9s linear
+}
+
+
+
+@keyframes CDown {
+  0%{transform: translate(-15vw, $lettersYup);}
+  100%{transform: translate(-15vw, $lettersYdown);}}
+
+@keyframes DDown {
+  0%{transform: translate(-10vw, $lettersYup);}
+  100%{transform: translate(-10vw, $lettersYdown);}}
+
+@keyframes EDown {
+  0%{transform: translate(-5vw, $lettersYup);}
+  100%{transform: translate(-5vw, $lettersYdown);}}
+
+@keyframes FDown {
+  0%{transform: translate(0, $lettersYup);}
+  100%{transform: translate(0, $lettersYdown);}}
+
+@keyframes GDown {
+  0%{transform: translate(5vw, $lettersYup);}
+  100%{transform: translate(5vw, $lettersYdown);}}
+
+@keyframes ADown {
+  0%{transform: translate(10vw, $lettersYup);}
+  100%{transform: translate(10vw, $lettersYdown);}}
+
+@keyframes HDown {
+  0%{transform: translate(15vw, $lettersYup);}
+  100%{transform: translate(15vw, $lettersYdown);}}

@@ -98,23 +98,25 @@ class App extends React.Component{
             })
     }
 
+
+
     render(){
 
         return (
-            <BrowserRouter basename={process.env.PUBLIC_URL}>
+             <BrowserRouter basename={process.env.PUBLIC_URL}>
 
-                    <Songs/>
+                    {/*<Songs/>*/}
 
 
                 <div className="App" onKeyPress={this.handleKeyPress} onKeyUp={this.handleKeyUp}>
-                    <div className="songContainer">
-                        <Switch>
-                            <Route path="/Piraci_z_karaibow" exact component={Piraci_z_karaibow}/>
-                            <Route path="/Old_McDonald" exact component={Old_McDonald}/>
-                            <Route path="/Bella_ciao" exact component={Bella_ciao}/>
-                            <Route path="/Miala_baba_koguta" exact component={Miala_baba_koguta}/>
-                        </Switch>
-                    </div>
+                    {/*<div className="songContainer">*/}
+                    {/*    <Switch>*/}
+                    {/*        <Route path="/Piraci_z_karaibow" exact component={Piraci_z_karaibow}/>*/}
+                    {/*        <Route path="/Old_McDonald" exact component={Old_McDonald}/>*/}
+                    {/*        <Route path="/Bella_ciao" exact component={Bella_ciao}/>*/}
+                    {/*        <Route path="/Miala_baba_koguta" exact component={Miala_baba_koguta}/>*/}
+                    {/*    </Switch>*/}
+                    {/*</div>*/}
 
                     <div className="keyboard" >
                         <PianoKeys handleClick={this.handleClick} buttonPressed={this.state.buttonPressed}/>
@@ -122,7 +124,8 @@ class App extends React.Component{
                     <PlayButton/>
 
                 </div>
-            </BrowserRouter>
+             </BrowserRouter>
+
         );
     }
 }
