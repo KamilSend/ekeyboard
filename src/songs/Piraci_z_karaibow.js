@@ -27,7 +27,6 @@ const Piraci_z_karaibow = () => {
                 <span className="animationLetter C">C</span>
                 <span className="animationLetter D">D</span>
             </div>
-
         </>
     )
 }

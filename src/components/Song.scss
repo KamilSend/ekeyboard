@@ -1,6 +1,8 @@
 $base-color: #c6538c;
-$lettersYup:-35vh;
-$lettersYdown:1200px;
+$lettersYup:-34vh;
+$lettersYdown:90vh;
+$duration:9s;
+$babaDuration:15s;
 
 .animationLettersWrapper{
   display: flex;
@@ -16,38 +18,80 @@ $lettersYdown:1200px;
 
 .C{
   transform: translate(-15vw, $lettersYup);
-  animation: CDown  9s linear
+  animation-name: CDown;
+  animation-duration: $duration;
+  animation-timing-function: linear;
 }
+
+//.C.baba{
+//  animation-duration: $babaDuration;
+//}
 
 .D{
   transform: translate(-10vw, $lettersYup);
-  animation: DDown  9s linear
+  animation-name: DDown;
+  animation-duration: $duration;
+  animation-timing-function: linear;
 }
+
+//.D.baba{
+//  animation-duration: $babaDuration;
+//}
 
 .E{
   transform: translate(-5vw, $lettersYup);
-  animation: DDown  9s linear
+  animation-name: EDown;
+  animation-duration: $duration;
+  animation-timing-function: linear;
 }
+
+//.E.baba{
+//  animation-duration: $babaDuration;
+//}
 
 .F{
   transform: translate(0, $lettersYup);
-  animation: FDown  9s linear
+  animation-name: FDown;
+  animation-duration: $duration;
+  animation-timing-function: linear;
 }
+
+//.F.baba{
+//  animation-duration: $babaDuration;
+//}
 
 .G{
   transform: translate(5vw, $lettersYup);
-  animation: GDown  9s linear
+  animation-name: GDown;
+  animation-duration: $duration;
+  animation-timing-function: linear;
 }
+
+//.G.baba{
+//  animation-duration: $babaDuration;
+//}
 
 .A{
   transform: translate(10vw, $lettersYup);
-  animation: ADown  9s linear
+  animation-name: ADown;
+  animation-duration: $duration;
+  animation-timing-function: linear;
 }
+
+//.A.baba{
+//  animation-duration: $babaDuration;
+//}
 
 .H{
   transform: translate(15vw, $lettersYup);
-  animation: ADown  9s linear
+  animation-name: HDown;
+  animation-duration: $duration;
+  animation-timing-function: linear;
 }
+
+//.H.baba{
+//  animation-duration: $babaDuration;
+//}
 
 
 
