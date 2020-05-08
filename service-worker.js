@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ekeyboard/precache-manifest.426b582c321a940f9147ce5bfa0aed55.js"
+  "/ekeyboard/precache-manifest.471637eeb3c6fb05705982968b44883f.js"
 );
 
 self.addEventListener('message', (event) => {
