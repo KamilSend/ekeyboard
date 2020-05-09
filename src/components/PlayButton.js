@@ -12,20 +12,10 @@ class PlayButton extends React.Component{
     handlePlayClick = () => {
         //duration depends on song
         const urlName = [...window.location.pathname]
-        urlName.shift()
-        urlName.shift()
-        urlName.shift()
-        urlName.shift()
-        urlName.shift()
-        urlName.shift()
-        urlName.shift()
-        urlName.shift()
-        urlName.shift()
-        urlName.shift()
-        urlName.shift()
+        urlName.splice(0, 11)
 
         const mySong = urlName.join("")
-
+        
         let duration
 
         if(mySong==="Old_McDonald"){
@@ -47,9 +37,6 @@ class PlayButton extends React.Component{
         this.turnOffactive = setTimeout(() => {
             this.setState(() => ({active: false}))
         }, duration);
-
-        // e.target.classList.contains(this.myClass)
-        // OldMcDonald
     }
 
     handleNavLinkClick = () => {

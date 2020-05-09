@@ -1,0 +1,61 @@
+$lettersYup:-34vh;
+$lettersYdown:90vh;
+$piraciDuration:9s;
+
+.C.piraci{
+  animation-duration: $piraciDuration;
+}
+
+.D.piraci{
+  animation-duration: $piraciDuration;
+}
+
+.E.piraci{
+  animation-duration: $piraciDuration;
+}
+
+.F.piraci{
+  animation-duration: $piraciDuration;
+}
+
+.G.piraci{
+  animation-duration: $piraciDuration;
+}
+
+.A.piraci{
+  animation-duration: $piraciDuration;
+}
+
+.H.piraci{
+  animation-duration: $piraciDuration;
+}
+
+
+
+@keyframes CDown {
+  0%{transform: translate(-15vw, $lettersYup);}
+  100%{transform: translate(-15vw, $lettersYdown);}}
+
+@keyframes DDown {
+  0%{transform: translate(-10vw, $lettersYup);}
+  100%{transform: translate(-10vw, $lettersYdown);}}
+
+@keyframes EDown {
+  0%{transform: translate(-5vw, $lettersYup);}
+  100%{transform: translate(-5vw, $lettersYdown);}}
+
+@keyframes FDown {
+  0%{transform: translate(0, $lettersYup);}
+  100%{transform: translate(0, $lettersYdown);}}
+
+@keyframes GDown {
+  0%{transform: translate(5vw, $lettersYup);}
+  100%{transform: translate(5vw, $lettersYdown);}}
+
+@keyframes ADown {
+  0%{transform: translate(10vw, $lettersYup);}
+  100%{transform: translate(10vw, $lettersYdown);}}
+
+@keyframes HDown {
+  0%{transform: translate(15vw, $lettersYup);}
+  100%{transform: translate(15vw, $lettersYdown);}}
