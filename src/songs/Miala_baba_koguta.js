@@ -1,14 +1,37 @@
 import React from 'react'
-
+import './Miala_baba_koguta.scss'
 
 const Miala_baba_koguta = () => {
 
     return(
         <>
-            <span className="letter">F F E D D C F F E G G F A</span>
-            <span>Miała baba koguta, koguta, koguta,</span>
-            <span className="letter">F F E D D C F F E G F</span>
-            <span>wsadziła go do buta, do buta, hej!</span>
+            <div className="animationLettersWrapper songContainer">
+                <span className="animationLetter baba F">F</span>
+                <span className="animationLetter baba F">F</span>
+                <span className="animationLetter baba E">E</span>
+                <span className="animationLetter baba D">D</span>
+                <span className="animationLetter baba D">D</span>
+                <span className="animationLetter baba C">C</span>
+                <span className="animationLetter baba F">F</span>
+                <span className="animationLetter baba F">F</span>
+                <span className="animationLetter baba E">E</span>
+                <span className="animationLetter baba G">G</span>
+                <span className="animationLetter baba G">G</span>
+                <span className="animationLetter baba F">F</span>
+                <span className="animationLetter baba A">A</span>
+                <span className="animationLetter baba A"></span>
+                <span className="animationLetter baba F">F</span>
+                <span className="animationLetter baba F">F</span>
+                <span className="animationLetter baba E">E</span>
+                <span className="animationLetter baba D">D</span>
+                <span className="animationLetter baba D">D</span>
+                <span className="animationLetter baba C">C</span>
+                <span className="animationLetter baba F">F</span>
+                <span className="animationLetter baba F">F</span>
+                <span className="animationLetter baba E">E</span>
+                <span className="animationLetter baba G">G</span>
+                <span className="animationLetter baba F">F</span>
+            </div>
         </>
     )
 }

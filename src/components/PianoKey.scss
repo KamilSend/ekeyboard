@@ -36,31 +36,11 @@
     &:active{
         transform: translateY(5px);
         box-shadow: 0 0 0 0 lightgrey;
-
     }
   }
 
 button.pressed{
   transform: translateY(5px);
   box-shadow: 0 0 0 0 lightgrey;
-  //animation: App-logo-spin  1s linear;
 }
-
-//@keyframes App-logo-spin {
-//
-//  0%{
-//    transform: translateY(0px);
-//    box-shadow: 0 5px 0 0 lightgrey;
-//  }
-//
-//  50%{
-//    transform: translateY(5px);
-//    box-shadow: 0 0 0 0 lightgrey;
-//  }
-//
-//  100%{
-//    transform: translateY(0px);
-//    box-shadow: 0 5px 0 0 lightgrey;
-//  }
-//}
 

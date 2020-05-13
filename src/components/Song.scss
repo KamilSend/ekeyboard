@@ -1,0 +1,93 @@
+$base-color: #c6538c;
+$lettersYup:-34vh;
+$lettersYdown:90vh;
+$duration:9s;
+
+.animationLettersWrapper{
+  display: flex;
+  flex-direction: column-reverse;
+  //transform:translateY(-100vh);
+  max-height:35vh;
+  overflow: hidden;
+}
+
+.animationLetter{
+  padding:10px;
+}
+
+.C{
+  transform: translate(-15vw, $lettersYup);
+  animation-name: CDown;
+  animation-duration: $duration;
+  animation-timing-function: linear;
+}
+
+.D{
+  transform: translate(-10vw, $lettersYup);
+  animation-name: DDown;
+  animation-duration: $duration;
+  animation-timing-function: linear;
+}
+
+.E{
+  transform: translate(-5vw, $lettersYup);
+  animation-name: EDown;
+  animation-duration: $duration;
+  animation-timing-function: linear;
+}
+
+.F{
+  transform: translate(0, $lettersYup);
+  animation-name: FDown;
+  animation-duration: $duration;
+  animation-timing-function: linear;
+}
+
+.G{
+  transform: translate(5vw, $lettersYup);
+  animation-name: GDown;
+  animation-duration: $duration;
+  animation-timing-function: linear;
+}
+
+.A{
+  transform: translate(10vw, $lettersYup);
+  animation-name: ADown;
+  animation-duration: $duration;
+  animation-timing-function: linear;
+}
+
+.H{
+  transform: translate(15vw, $lettersYup);
+  animation-name: HDown;
+  animation-duration: $duration;
+  animation-timing-function: linear;
+}
+
+@keyframes CDown {
+  0%{transform: translate(-15vw, $lettersYup);}
+  100%{transform: translate(-15vw, $lettersYdown);}}
+
+@keyframes DDown {
+  0%{transform: translate(-10vw, $lettersYup);}
+  100%{transform: translate(-10vw, $lettersYdown);}}
+
+@keyframes EDown {
+  0%{transform: translate(-5vw, $lettersYup);}
+  100%{transform: translate(-5vw, $lettersYdown);}}
+
+@keyframes FDown {
+  0%{transform: translate(0, $lettersYup);}
+  100%{transform: translate(0, $lettersYdown);}}
+
+@keyframes GDown {
+  0%{transform: translate(5vw, $lettersYup);}
+  100%{transform: translate(5vw, $lettersYdown);}}
+
+@keyframes ADown {
+  0%{transform: translate(10vw, $lettersYup);}
+  100%{transform: translate(10vw, $lettersYdown);}}
+
+@keyframes HDown {
+  0%{transform: translate(15vw, $lettersYup);}
+  100%{transform: translate(15vw, $lettersYdown);}}

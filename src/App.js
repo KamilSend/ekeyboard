@@ -1,13 +1,7 @@
 import React from 'react';
-
 import './App.scss';
 import PianoKeys from './components/PianoKeys'
-import Songs from './components/Songs'
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import Piraci_z_karaibow from './songs/Piraci_z_karaibow'
-import Old_McDonald from './songs/Old_McDonald'
-import Bella_ciao from './songs/Bella_ciao'
-import Miala_baba_koguta from './songs/Miala_baba_koguta'
+import {BrowserRouter} from 'react-router-dom';
 import PlayButton from './components/PlayButton'
 
 
@@ -58,12 +52,11 @@ class App extends React.Component{
     }
 
     handleKeyPress = (event) => {
-        console.log('press')
         sounds.forEach(beep => {
             if (event.key === beep.id) {
                 beep.sound.play()
             }
-        }) //ma się odtworzyć dźwięk, absolutnie niezbędne
+        })
 
         const buttonPressed = [...this.state.buttonPressed]
         const buttonPressed2 =[]//kopia stanu i pusta tablica do której będą pushowane wyfolsowane elementy
@@ -101,28 +94,15 @@ class App extends React.Component{
     render(){
 
         return (
-            <BrowserRouter basename={process.env.PUBLIC_URL}>
-
-                    <Songs/>
-
-
+             <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <div className="App" onKeyPress={this.handleKeyPress} onKeyUp={this.handleKeyUp}>
-                    <div className="songContainer">
-                        <Switch>
-                            <Route path="/Piraci_z_karaibow" exact component={Piraci_z_karaibow}/>
-                            <Route path="/Old_McDonald" exact component={Old_McDonald}/>
-                            <Route path="/Bella_ciao" exact component={Bella_ciao}/>
-                            <Route path="/Miala_baba_koguta" exact component={Miala_baba_koguta}/>
-                        </Switch>
-                    </div>
-
                     <div className="keyboard" >
                         <PianoKeys handleClick={this.handleClick} buttonPressed={this.state.buttonPressed}/>
                     </div>
                     <PlayButton/>
-
                 </div>
-            </BrowserRouter>
+             </BrowserRouter>
+
         );
     }
 }
