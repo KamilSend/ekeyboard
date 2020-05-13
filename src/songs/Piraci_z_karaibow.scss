@@ -1,36 +1,38 @@
 $lettersYup:-34vh;
 $lettersYdown:90vh;
-$piraciDuration:9s;
+$piraciDuration:9000;
 
-.C.piraci{
-  animation-duration: $piraciDuration;
+:export {
+  piraciDuration:$piraciDuration;
 }
 
-.D.piraci{
-  animation-duration: $piraciDuration;
-}
-
-.E.piraci{
-  animation-duration: $piraciDuration;
-}
-
-.F.piraci{
-  animation-duration: $piraciDuration;
-}
-
-.G.piraci{
-  animation-duration: $piraciDuration;
-}
-
-.A.piraci{
-  animation-duration: $piraciDuration;
-}
-
-.H.piraci{
-  animation-duration: $piraciDuration;
-}
-
-
+//.C.piraci{
+//  animation-duration: $piraciDuration;
+//}
+//
+//.D.piraci{
+//  animation-duration: $piraciDuration;
+//}
+//
+//.E.piraci{
+//  animation-duration: $piraciDuration;
+//}
+//
+//.F.piraci{
+//  animation-duration: $piraciDuration;
+//}
+//
+//.G.piraci{
+//  animation-duration: $piraciDuration;
+//}
+//
+//.A.piraci{
+//  animation-duration: $piraciDuration;
+//}
+//
+//.H.piraci{
+//  animation-duration: $piraciDuration;
+//}
 
 @keyframes CDown {
   0%{transform: translate(-15vw, $lettersYup);}

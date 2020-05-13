@@ -44,6 +44,24 @@ html,body,ul, ul,a{
   }
 }
 
+.velocitySpanWrapper{
+  top:18vh;
+  left:10px;
+  width:4vh;
+  height:300px;
+  position: absolute;
+}
+
+.velocitySpan{
+  position: relative;
+  top:1vh;
+  left:-90px;
+  width:200px;
+  display: block;
+  transform: rotate(-90deg);
+  font-size: 20px;
+}
+
 
 
 
