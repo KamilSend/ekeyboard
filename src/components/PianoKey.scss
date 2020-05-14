@@ -1,19 +1,4 @@
-@mixin respond($breakpoint) {
-  @if $breakpoint == phone {
-    @media only screen and (max-width: 600px) { @content };
-  }
-
-  @if $breakpoint == phone-land {
-    @media only screen and (max-height: 450px) { @content };
-  }
-
-  @if $breakpoint == tab-port {
-    @media only screen and (max-width: 800px) { @content };
-  }
-  @if $breakpoint == tab-land {
-    @media only screen and (max-width: 1000px) { @content };
-  }
-}
+@import "../Variables.scss";
 
 .pianoKey{
     min-width: 5vw;
@@ -24,6 +9,7 @@
     outline:none;
     box-shadow: 0 5px 0 0 lightgrey;
     transition: .1s;
+    text-transform: uppercase;
 
   @include respond(tab-port){
     min-width: 10vw;

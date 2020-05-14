@@ -125,14 +125,25 @@ class PlayButton extends React.Component{
                 {this.state.active?<Song play={this.state.active}/>:null}
 
                 <button onClick={this.handlePlayClick} className="PlayButton whiteButton">{!this.state.active?'play':'stop'}</button>
-                <div className="velocityButtonsWrapper">
-                    <VelocityUp velocityup={this.handleVelocityUpClick}/>
-                    <span>{this.state.velocity}</span>
-                    <VelocityDown velocitydown={this.handleVelocityDownClick}/>
+                <div className="velocityWrapper">
+                    <div className="velocitySpanWrapper">
+                        <span>P</span><br/>
+                        <span>R</span><br/>
+                        <span>Ę</span><br/>
+                        <span>D</span><br/>
+                        <span>K</span><br/>
+                        <span>O</span><br/>
+                        <span>Ś</span><br/>
+                        <span>Ć</span><br/>
+                    </div>
+                    <div className="velocityButtonsWrapper">
+                        <VelocityUp velocityup={this.handleVelocityUpClick}/>
+                        <span>{this.state.velocity}</span>
+                        <VelocityDown velocitydown={this.handleVelocityDownClick}/>
+                    </div>
+
                 </div>
-                <div className="velocitySpanWrapper">
-                    <span className="velocitySpan">Prędkość</span>
-                </div>
+
 
             </>
         )
