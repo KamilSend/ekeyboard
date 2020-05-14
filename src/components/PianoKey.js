@@ -3,12 +3,11 @@ import './PianoKey.scss'
 
 class PianoKey extends React.Component{
 
-
     render(){
         return(
-            this.props.descriptions.pressed?<button className="pianoKey pressed">{this.props.descriptions.value}</button>:(
-                <button onClick={this.props.handleClick}  className="pianoKey">{this.props.descriptions.value}</button>)
-        )
+            //NEED TO CHANGE THIS TO WORK WITH ALTERNATIVE KEYBOARD
+                this.props.pressed?<button className="pianoKey pressed">{this.props.descriptions}</button>:
+                    (<button onClick={this.props.handleClick}  className="pianoKey">{this.props.descriptions}</button>)                )
     }
 }
 export default PianoKey

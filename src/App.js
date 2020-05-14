@@ -3,6 +3,8 @@ import './App.scss';
 import PianoKeys from './components/PianoKeys'
 import {BrowserRouter} from 'react-router-dom';
 import PlayButton from './components/PlayButton'
+import ChangeKeyboard from './components/ChangeKeyboard'
+
 
 
 
@@ -20,29 +22,32 @@ const config = {
     throttleMs: 100}
 
 const sounds = [
-    {id:"c", sound:new UIfx(c, config)},
-    {id:"d", sound:new UIfx(d, config)},
-    {id:"e", sound:new UIfx(e, config)},
-    {id:"f", sound:new UIfx(f, config)},
-    {id:"g", sound:new UIfx(g, config)},
-    {id:"a", sound:new UIfx(a, config)},
-    {id:"h", sound:new UIfx(h, config)},
+    {id:"c", altid:"s", sound:new UIfx(c, config)},
+    {id:"d", altid:"d", sound:new UIfx(d, config)},
+    {id:"e", altid:"f", sound:new UIfx(e, config)},
+    {id:"f", altid:"g", sound:new UIfx(f, config)},
+    {id:"g", altid:"h", sound:new UIfx(g, config)},
+    {id:"a", altid:"j", sound:new UIfx(a, config)},
+    {id:"h", altid:"k", sound:new UIfx(h, config)},
 ]
 
 class App extends React.Component{
 
     state = {
         buttonPressed:[
-            {id:"0", value:"c", pressed:false},
-            {id:"1", value:"d", pressed:false},
-            {id:"2", value:"e", pressed:false},
-            {id:"3", value:"f", pressed:false},
-            {id:"4", value:"g", pressed:false},
-            {id:"5", value:"a", pressed:false},
-            {id:"6", value:"h", pressed:false},
+            {id:"0", value:"c", altvalue:"s", pressed:false},
+            {id:"1", value:"d", altvalue:"d", pressed:false},
+            {id:"2", value:"e", altvalue:"f", pressed:false},
+            {id:"3", value:"f", altvalue:"g", pressed:false},
+            {id:"4", value:"g", altvalue:"h", pressed:false},
+            {id:"5", value:"a", altvalue:"j", pressed:false},
+            {id:"6", value:"h", altvalue:"k", pressed:false},
         ],
+        alt: true,
     }
 
+    //NEED TO CHANGE THIS TO WORK WITH ALTERNATIVE KEYBOARD
+    //Play sound on click
     handleClick = (event) => {
         sounds.forEach(beep => {
             if (event.target.textContent === beep.id) {
@@ -51,23 +56,41 @@ class App extends React.Component{
         })
     }
 
+    //NEED TO CHANGE THIS TO WORK WITH ALTERNATIVE KEYBOARD
+    //Play sound on key press
     handleKeyPress = (event) => {
         sounds.forEach(beep => {
-            if (event.key === beep.id) {
+            if (event.key === beep.id && !this.state.alt) {
+                beep.sound.play()
+            }else if (event.key === beep.altid && this.state.alt){
                 beep.sound.play()
             }
         })
 
+        //copy current state
         const buttonPressed = [...this.state.buttonPressed]
-        const buttonPressed2 =[]//kopia stanu i pusta tablica do której będą pushowane wyfolsowane elementy
+        //another table to keep active buttons, it will be necessary to handle multiple keys in the future
+        const buttonPressed2 =[]
+
+        //NEED TO CHANGE THIS TO WORK WITH ALTERNATIVE KEYBOARD
+        //dla każdego elementu w kopii stanu weź go i wrzuć do tablicy buttonpressed2 co jest
+        //tym samym co skopiowaniem jej więc nie czaje, a potem jeżeli wartość klawisza jest taka sama
+        //co wartość value czyli literki z tablicy, wciśnij graficznie klawisz
 
         buttonPressed.forEach(beep => {
-            beep = {id:beep.id, value:beep.value, pressed:false}
+            //clear pressed keys
+            beep = {id:beep.id, value:beep.value, altvalue:beep.altvalue, pressed:false}
             buttonPressed2.push(beep)
 
-            if (event.key === beep.value) {
-                // let active = buttonPressed2.slice(beep.id,beep.id*1 + 1)
-                let active = {id:beep.id, value:beep.value, pressed:true}
+            if (event.key === beep.value && !this.state.alt) {
+                let active = {id:beep.id, value:beep.value, altvalue:beep.altvalue, pressed:true}
+                buttonPressed2[beep.id] = active
+                this.setState({
+                    buttonPressed:buttonPressed2
+                })
+            }
+            else if (event.key === beep.altvalue && this.state.alt) {
+                let active = {id:beep.id, value:beep.value,  altvalue:beep.altvalue, pressed:true}
                 buttonPressed2[beep.id] = active
                 this.setState({
                     buttonPressed:buttonPressed2
@@ -78,17 +101,24 @@ class App extends React.Component{
 
     handleKeyUp = () => {
 
-            this.setState({
-                buttonPressed:[
-                    {id:"0", value:"c", pressed:false},
-                    {id:"1", value:"d", pressed:false},
-                    {id:"2", value:"e", pressed:false},
-                    {id:"3", value:"f", pressed:false},
-                    {id:"4", value:"g", pressed:false},
-                    {id:"5", value:"a", pressed:false},
-                    {id:"6", value:"h", pressed:false},
-                ]
-            })
+        //NEED TO CHANGE THIS TO WORK WITH ALTERNATIVE KEYBOARD
+        this.setState({
+            buttonPressed:[
+                {id:"0", value:"c", altvalue:"s", pressed:false},
+                {id:"1", value:"d", altvalue:"d", pressed:false},
+                {id:"2", value:"e", altvalue:"f", pressed:false},
+                {id:"3", value:"f", altvalue:"g", pressed:false},
+                {id:"4", value:"g", altvalue:"h", pressed:false},
+                {id:"5", value:"a", altvalue:"j", pressed:false},
+                {id:"6", value:"h", altvalue:"k", pressed:false},
+            ],
+        })
+    }
+
+    handleChangeKeyboardClick = () => {
+        this.setState({
+            alt:!this.state.alt
+        })
     }
 
     render(){
@@ -97,9 +127,11 @@ class App extends React.Component{
              <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <div className="App" onKeyPress={this.handleKeyPress} onKeyUp={this.handleKeyUp}>
                     <div className="keyboard" >
-                        <PianoKeys handleClick={this.handleClick} buttonPressed={this.state.buttonPressed}/>
+                        <PianoKeys handleClick={this.handleClick} alt={this.state.alt}
+                                   buttonPressed={this.state.buttonPressed}/>
                     </div>
                     <PlayButton/>
+                    <ChangeKeyboard alt={this.state.alt} changeKeyboard={this.handleChangeKeyboardClick}/>
                 </div>
              </BrowserRouter>
         );

@@ -73,4 +73,25 @@
   }
 }
 
+.changeKeyboardWrapper{
+  position: absolute;
+  top:40vh;
+  left:2vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.3;
+}
+
+.changeKeyboardButton{
+  width:80px;
+  height:50px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top:5px;
+}
+
 
