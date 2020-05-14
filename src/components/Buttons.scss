@@ -1,0 +1,76 @@
+@import "../Variables.scss";
+
+.PlayButton{
+  position: absolute;
+  min-width:15vw;
+  min-height: 10vh;
+  left:50%;
+  top:75%;
+  transform: translate(-50%,-50%);
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.whiteButton{
+  background-color: white;
+  border-radius: 15px;
+  border: 3px solid black;
+  outline: none;
+  cursor: pointer;
+  transition: .1s;
+  box-sizing: border-box;
+
+  &:active{
+    border: 5px solid black;
+  }
+}
+
+.velocityWrapper{
+  position: absolute;
+  top:8vh;
+  left:2vh;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+
+  @include respond (phone){
+    font-size:14px;
+  }
+}
+
+.velocitySpanWrapper{
+}
+
+.velocityButtonsWrapper{
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include respond (phone){
+    font-size:18px;
+  }
+}
+
+.velocityButton{
+  width:50px;
+  height:50px;
+  margin: 2vh 1vw 2vh 1vw;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size:45px;
+
+  @include respond (phone){
+    width:35px;
+    height:35px;
+    font-size:30px;
+  }
+}
+
+

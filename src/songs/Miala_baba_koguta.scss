@@ -1,34 +1,40 @@
+@import "../Variables.scss";
+
 $lettersYup:-34vh;
 $lettersYdown:140vh;
-$babaDuration:11s;
+$babaDuration:11000;
 
-.C.baba{
-  animation-duration: $babaDuration;
+:export {
+  babaDuration:$babaDuration;
 }
 
-.D.baba{
-  animation-duration: $babaDuration;
-}
-
-.E.baba{
-  animation-duration: $babaDuration;
-}
-
-.F.baba{
-  animation-duration: $babaDuration;
-}
-
-.G.baba{
-  animation-duration: $babaDuration;
-}
-
-.A.baba{
-  animation-duration: $babaDuration;
-}
-
-.H.baba{
-  animation-duration: $babaDuration;
-}
+//.C.baba{
+//  animation-duration: $babaDuration;
+//}
+//
+//.D.baba{
+//  animation-duration: $babaDuration;
+//}
+//
+//.E.baba{
+//  animation-duration: $babaDuration;
+//}
+//
+//.F.baba{
+//  animation-duration: $babaDuration;
+//}
+//
+//.G.baba{
+//  animation-duration: $babaDuration;
+//}
+//
+//.A.baba{
+//  animation-duration: $babaDuration;
+//}
+//
+//.H.baba{
+//  animation-duration: $babaDuration;
+//}
 
 
 

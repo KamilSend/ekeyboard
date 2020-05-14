@@ -1,7 +1,9 @@
+@import "../Variables.scss";
+
 $base-color: #c6538c;
 $lettersYup:-34vh;
 $lettersYdown:90vh;
-$duration:9s;
+//$duration:9s;
 
 .animationLettersWrapper{
   display: flex;
@@ -18,49 +20,49 @@ $duration:9s;
 .C{
   transform: translate(-15vw, $lettersYup);
   animation-name: CDown;
-  animation-duration: $duration;
+  //animation-duration: $duration;
   animation-timing-function: linear;
 }
 
 .D{
   transform: translate(-10vw, $lettersYup);
   animation-name: DDown;
-  animation-duration: $duration;
+  //animation-duration: $duration;
   animation-timing-function: linear;
 }
 
 .E{
   transform: translate(-5vw, $lettersYup);
   animation-name: EDown;
-  animation-duration: $duration;
+  //animation-duration: $duration;
   animation-timing-function: linear;
 }
 
 .F{
   transform: translate(0, $lettersYup);
   animation-name: FDown;
-  animation-duration: $duration;
+  //animation-duration: $duration;
   animation-timing-function: linear;
 }
 
 .G{
   transform: translate(5vw, $lettersYup);
   animation-name: GDown;
-  animation-duration: $duration;
+  //animation-duration: $duration;
   animation-timing-function: linear;
 }
 
 .A{
   transform: translate(10vw, $lettersYup);
   animation-name: ADown;
-  animation-duration: $duration;
+  //animation-duration: $duration;
   animation-timing-function: linear;
 }
 
 .H{
   transform: translate(15vw, $lettersYup);
   animation-name: HDown;
-  animation-duration: $duration;
+  //animation-duration: $duration;
   animation-timing-function: linear;
 }
 
