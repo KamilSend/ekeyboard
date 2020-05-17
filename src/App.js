@@ -117,7 +117,7 @@ class App extends React.Component{
 
     handleChangeKeyboardClick = () => {
         this.setState({
-            alt:!this.state.alt
+            alt: !this.state.alt,
         })
     }
 

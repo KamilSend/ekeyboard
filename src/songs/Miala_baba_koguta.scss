@@ -1,5 +1,7 @@
 @import "../Variables.scss";
+@import "../components/Song.scss";
 
+//$lettersYup:-34vh;
 $lettersYup:-34vh;
 $lettersYdown:140vh;
 $babaDuration:11000;
@@ -8,60 +10,3 @@ $babaDuration:11000;
   babaDuration:$babaDuration;
 }
 
-//.C.baba{
-//  animation-duration: $babaDuration;
-//}
-//
-//.D.baba{
-//  animation-duration: $babaDuration;
-//}
-//
-//.E.baba{
-//  animation-duration: $babaDuration;
-//}
-//
-//.F.baba{
-//  animation-duration: $babaDuration;
-//}
-//
-//.G.baba{
-//  animation-duration: $babaDuration;
-//}
-//
-//.A.baba{
-//  animation-duration: $babaDuration;
-//}
-//
-//.H.baba{
-//  animation-duration: $babaDuration;
-//}
-
-
-
-@keyframes CDown {
-  0%{transform: translate(-15vw, $lettersYup);}
-  100%{transform: translate(-15vw, $lettersYdown);}}
-
-@keyframes DDown {
-  0%{transform: translate(-10vw, $lettersYup);}
-  100%{transform: translate(-10vw, $lettersYdown);}}
-
-@keyframes EDown {
-  0%{transform: translate(-5vw, $lettersYup);}
-  100%{transform: translate(-5vw, $lettersYdown);}}
-
-@keyframes FDown {
-  0%{transform: translate(0, $lettersYup);}
-  100%{transform: translate(0, $lettersYdown);}}
-
-@keyframes GDown {
-  0%{transform: translate(5vw, $lettersYup);}
-  100%{transform: translate(5vw, $lettersYdown);}}
-
-@keyframes ADown {
-  0%{transform: translate(10vw, $lettersYup);}
-  100%{transform: translate(10vw, $lettersYdown);}}
-
-@keyframes HDown {
-  0%{transform: translate(15vw, $lettersYup);}
-  100%{transform: translate(15vw, $lettersYdown);}}

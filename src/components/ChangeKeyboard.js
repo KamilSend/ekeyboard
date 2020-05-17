@@ -9,8 +9,8 @@ class ChangeKeyboard extends React.Component{
                 <span>SWITCH</span>
                 <span>KEYBOARD</span>
 
-                <div className="whiteButton changeKeyboardButton" onClick={this.props.changeKeyboard}>
-                    {this.props.alt?"PC":"PIANO"}</div>
+                <button className="whiteButton changeKeyboardButton" onClick={this.props.changeKeyboard}>
+                    {this.props.alt?"PC":"PIANO"}</button>
             </div>
         )
     }
