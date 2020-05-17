@@ -1,7 +1,7 @@
 @import "../Variables.scss";
 
 .pianoKey{
-    min-width: 5vw;
+    min-width: $keyDesktop;
     min-height: 25vh;
     background-color: white;
     border:1px solid lightgray;
@@ -10,13 +10,19 @@
     box-shadow: 0 5px 0 0 lightgrey;
     transition: .1s;
     text-transform: uppercase;
+    font-weight: bold;
+    color:#222222;
 
   @include respond(tab-port){
-    min-width: 10vw;
+    min-width: $keyTabPort;
   }
 
   @include respond(phone){
-    min-width: 13.5vw;
+    min-width: $keyPhone;
+  }
+
+  @include respond(phone-land){
+    min-height:35vh;
   }
 
     &:active{

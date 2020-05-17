@@ -7,7 +7,7 @@ class VelocityDown extends React.Component{
 
     render(){
         return(
-            <div className="whiteButton velocityButton" onClick={this.props.velocitydown}>-</div>
+            <button className="whiteButton velocityButton" onClick={this.props.velocitydown}>-</button>
         )
     }
 }

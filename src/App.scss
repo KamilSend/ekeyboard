@@ -13,6 +13,14 @@ html,body,ul, ul,a{
   transform: translateY(-50%);
   width:100%;
   text-align: center;
+
+  @include respond (phone){
+    top:65%;
+  }
+
+  @include respond (phone-land){
+    top:65%;
+  }
 }
 
 .songContainer{

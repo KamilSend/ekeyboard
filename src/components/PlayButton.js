@@ -13,8 +13,8 @@ class PlayButton extends React.Component{
 
     state = {
         active: false,
-        baba: 14000,
-        piraci: 10000,
+        baba: 11000,
+        piraci: 7000,
         old: 10000,
         velocity:1,
     }
@@ -127,14 +127,11 @@ class PlayButton extends React.Component{
                 <button onClick={this.handlePlayClick} className="PlayButton whiteButton">{!this.state.active?'play':'stop'}</button>
                 <div className="velocityWrapper">
                     <div className="velocitySpanWrapper">
+                        <span>S</span><br/>
                         <span>P</span><br/>
-                        <span>R</span><br/>
-                        <span>Ę</span><br/>
+                        <span>E</span><br/>
+                        <span>E</span><br/>
                         <span>D</span><br/>
-                        <span>K</span><br/>
-                        <span>O</span><br/>
-                        <span>Ś</span><br/>
-                        <span>Ć</span><br/>
                     </div>
                     <div className="velocityButtonsWrapper">
                         <VelocityUp velocityup={this.handleVelocityUpClick}/>
