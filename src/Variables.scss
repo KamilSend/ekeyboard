@@ -21,6 +21,15 @@ $keyPhone:12vw;
 $phoneLandCoefficient:1;
 $lettersYdown:190vh;
 
+$oldDuration:9000;
+$babaDuration:11000;
+$piraciDuration:9000;
+
+:export {
+  oldDuration:$oldDuration;
+  babaDuration:$babaDuration;
+  piraciDuration:$piraciDuration;
+}
 
 
 @mixin animateLetters (){

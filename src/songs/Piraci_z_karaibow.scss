@@ -1,11 +1,2 @@
 @import "../Variables.scss";
 @import "../components/Song.scss";
-
-$lettersYup:-34vh;
-//$lettersYdown:140vh;
-$piraciDuration:9000;
-
-:export {
-  piraciDuration:$piraciDuration;
-}
-
