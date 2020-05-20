@@ -54,7 +54,6 @@ class App extends React.Component{
         })
     }
 
-    //NEED TO CHANGE THIS TO WORK WITH ALTERNATIVE KEYBOARD
     //Play sound on key press
     handleKeyPress = (event) => {
         sounds.forEach(beep => {
@@ -69,11 +68,6 @@ class App extends React.Component{
         const buttonPressed = [...this.state.buttonPressed]
         //another table to keep active buttons, it will be necessary to handle multiple keys in the future
         const buttonPressed2 =[]
-
-        //NEED TO CHANGE THIS TO WORK WITH ALTERNATIVE KEYBOARD
-        //dla każdego elementu w kopii stanu weź go i wrzuć do tablicy buttonpressed2 co jest
-        //tym samym co skopiowaniem jej więc nie czaje, a potem jeżeli wartość klawisza jest taka sama
-        //co wartość value czyli literki z tablicy, wciśnij graficznie klawisz
 
         buttonPressed.forEach(beep => {
             //clear pressed keys
@@ -99,7 +93,6 @@ class App extends React.Component{
 
     handleKeyUp = () => {
 
-        //NEED TO CHANGE THIS TO WORK WITH ALTERNATIVE KEYBOARD
         this.setState({
             buttonPressed:[
                 {id:"0", value:"c", altvalue:"s", pressed:false},
