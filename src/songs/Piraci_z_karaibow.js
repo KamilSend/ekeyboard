@@ -1,6 +1,5 @@
 import React from 'react'
 import '../components/Song.scss'
-import './Piraci_z_karaibow.scss'
 
 const Piraci_z_karaibow = () => {
 

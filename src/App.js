@@ -5,9 +5,6 @@ import {BrowserRouter} from 'react-router-dom';
 import PlayButton from './components/PlayButton'
 import ChangeKeyboard from './components/ChangeKeyboard'
 
-
-
-
 import UIfx from 'uifx'
 import c from './assets/sound/C.wav'
 import d from './assets/sound/D.wav'
@@ -46,11 +43,12 @@ class App extends React.Component{
         alt: true,
     }
 
-    //NEED TO CHANGE THIS TO WORK WITH ALTERNATIVE KEYBOARD
     //Play sound on click
     handleClick = (event) => {
         sounds.forEach(beep => {
-            if (event.target.textContent === beep.id) {
+            if (event.target.textContent === beep.id && !this.state.alt) {
+                beep.sound.play()
+            }else if (event.target.textContent === beep.altid && this.state.alt){
                 beep.sound.play()
             }
         })

@@ -42,7 +42,6 @@ class PlayButton extends React.Component{
 
         //clearTimeout which might be set from click before
         clearTimeout(this.turnOffactive);
-
         //start or stop playing
         this.setState({
             active: !this.state.active
@@ -51,8 +50,6 @@ class PlayButton extends React.Component{
         this.turnOffactive = setTimeout(() => {
             this.setState(() => ({active: false}))
         }, duration);
-
-
     }
 
     //change status to false when changing songs to prevent running new song before clicking play
