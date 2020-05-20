@@ -1,9 +1,5 @@
 @import "../Variables.scss";
 
-//$base-color: #c6538c;
-$lettersYup:-34vh;
-//$lettersYdown:140vh;
-
 .animationLettersWrapper{
   display: flex;
   flex-direction: column-reverse;
@@ -21,66 +17,52 @@ $lettersYup:-34vh;
 }
 
 .C{
-  //transform: translate(-15vw, $lettersYup);
   animation-name: CDown;
   animation-timing-function: linear;
   @include respond(tab-port){animation-name: CDownTabPort;}
   @include respond(phone){animation-name: CDownPhone;}
-  //@include respond(phone-land){animation-name: CDownPhoneLand;}
 }
 
 .D{
-  //transform: translate(-10vw, $lettersYup);
   animation-name: DDown;
   animation-timing-function: linear;
   @include respond(tab-port){animation-name: DDownTabPort;}
   @include respond(phone){animation-name: DDownPhone;}
-  //@include respond(phone-land){animation-name: DDownPhoneLand;}
 }
 
 .E{
-  //transform: translate(-5vw, $lettersYup);
   animation-name: EDown;
   animation-timing-function: linear;
   @include respond(tab-port){animation-name: EDownTabPort;}
   @include respond(phone){animation-name: EDownPhone;}
-  //@include respond(phone-land){animation-name: EDownPhoneLand;}
 }
 
 .F{
-  //transform: translate(0, $lettersYup);
   animation-name: FDown;
   animation-timing-function: linear;
   @include respond(tab-port){animation-name: FDownTabPort;}
   @include respond(phone){animation-name: FDownPhone;}
-  //@include respond(phone-land){animation-name: FDownPhoneLand;}
 }
 
 .G{
-  //transform: translate(5vw, $lettersYup);
   animation-name: GDown;
   animation-timing-function: linear;
   @include respond(tab-port){animation-name: GDownTabPort;}
   @include respond(phone){animation-name: GDownPhone;}
-  //@include respond(phone-land){animation-name: GDownPhoneLand;}
 }
 
 .A{
-  //transform: translate(10vw, $lettersYup);
   animation-name: ADown;
   animation-timing-function: linear;
   @include respond(tab-port){animation-name: ADownTabPort;}
   @include respond(phone){animation-name: ADownPhone;}
-  //@include respond(phone-land){animation-name: ADownPhoneLand;}
 }
 
 .H{
-  //transform: translate(15vw, $lettersYup);
   animation-name: HDown;
   animation-timing-function: linear;
   @include respond(tab-port){animation-name: HDownTabPort;}
   @include respond(phone){animation-name: HDownPhone;}
-  //@include respond(phone-land){animation-name: HDownPhoneLand;}
 }
 
 

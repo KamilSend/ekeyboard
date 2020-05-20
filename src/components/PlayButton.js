@@ -15,7 +15,7 @@ class PlayButton extends React.Component{
         active: false,
         baba: 11000,
         piraci: 9000,
-        old: 10000,
+        old: 9000,
         velocity:1,
     }
 
