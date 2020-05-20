@@ -18,9 +18,11 @@
 $keyDesktop:5vw;
 $keyTabPort:10vw;
 $keyPhone:12vw;
-$phoneLandCoefficient:1;
 $lettersYdown:190vh;
+$lettersYdownOld:150vh;
+$lettersYdownBaba:150vh;
 $lettersYup:-34vh;
+
 $oldDuration:9000;
 $babaDuration:11000;
 $piraciDuration:9000;
@@ -32,116 +34,260 @@ $piraciDuration:9000;
 }
 
 
-@mixin animateLetters (){
-  @keyframes CDown {
+@mixin animateLettersBaba (){
+  @keyframes CDownBaba {
+    0%{transform: translate(-3*$keyDesktop, $lettersYup);}
+    100%{transform: translate(-3*$keyDesktop, $lettersYdownBaba);}}
+
+  @keyframes CDownTabPortBaba {
+    0%{transform: translate(-3*$keyTabPort, $lettersYup);}
+    100%{transform: translate(-3*$keyTabPort, $lettersYdownBaba);}}
+
+  @keyframes CDownPhoneBaba {
+    0%{transform: translate(-3*$keyPhone, $lettersYup);}
+    100%{transform: translate(-3*$keyPhone, $lettersYdownBaba);}}
+
+  @keyframes DDownBaba {
+    0%{transform: translate(-2*$keyDesktop, $lettersYup);}
+    100%{transform: translate(-2*$keyDesktop, $lettersYdownBaba);}}
+
+  @keyframes DDownTabPortBaba {
+    0%{transform: translate(-2*$keyTabPort, $lettersYup);}
+    100%{transform: translate(-2*$keyTabPort, $lettersYdownBaba);}}
+
+  @keyframes DDownPhoneBaba {
+    0%{transform: translate(-2*$keyPhone, $lettersYup);}
+    100%{transform: translate(-2*$keyPhone, $lettersYdownBaba);}}
+
+  @keyframes EDownBaba {
+    0%{transform: translate(-$keyDesktop, $lettersYup);}
+    100%{transform: translate(-$keyDesktop, $lettersYdownBaba);}}
+
+  @keyframes EDownTabPortBaba {
+    0%{transform: translate(-$keyTabPort, $lettersYup);}
+    100%{transform: translate(-$keyTabPort, $lettersYdownBaba);}}
+
+  @keyframes EDownPhoneBaba {
+    0%{transform: translate(-$keyPhone, $lettersYup);}
+    100%{transform: translate(-$keyPhone, $lettersYdownBaba);}}
+
+  @keyframes FDownBabaBaba {
+    0%{transform: translate(0, $lettersYup);}
+    100%{transform: translate(0, $lettersYdownBaba);}}
+
+  @keyframes FDownTabPortBaba {
+    0%{transform: translate(0, $lettersYup);}
+    100%{transform: translate(0, $lettersYdownBaba);}}
+
+  @keyframes FDownPhoneBaba {
+    0%{transform: translate(0, $lettersYup);}
+    100%{transform: translate(0, $lettersYdownBaba);}}
+
+  @keyframes GDownBaba {
+    0%{transform: translate($keyDesktop, $lettersYup);}
+    100%{transform: translate($keyDesktop, $lettersYdownBaba);}}
+
+  @keyframes GDownTabPortBaba {
+    0%{transform: translate($keyTabPort, $lettersYup);}
+    100%{transform: translate($keyTabPort, $lettersYdownBaba);}}
+
+  @keyframes GDownPhoneBaba {
+    0%{transform: translate($keyPhone, $lettersYup);}
+    100%{transform: translate($keyPhone, $lettersYdownBaba);}}
+
+  @keyframes ADownBaba {
+    0%{transform: translate(2*$keyDesktop, $lettersYup);}
+    100%{transform: translate(2*$keyDesktop, $lettersYdownBaba);}}
+
+  @keyframes ADownTabPortBaba {
+    0%{transform: translate(2*$keyTabPort, $lettersYup);}
+    100%{transform: translate(2*$keyTabPort, $lettersYdownBaba);}}
+
+  @keyframes ADownPhoneBaba {
+    0%{transform: translate(2*$keyPhone, $lettersYup);}
+    100%{transform: translate(2*$keyPhone, $lettersYdownBaba);}}
+
+  @keyframes HDownBaba {
+    0%{transform: translate(3*$keyDesktop, $lettersYup);}
+    100%{transform: translate(3*$keyDesktop, $lettersYdownBaba);}}
+
+  @keyframes HDownTabPortBaba {
+    0%{transform: translate(3*$keyTabPort, $lettersYup);}
+    100%{transform: translate(3*$keyTabPort, $lettersYdownBaba);}}
+
+  @keyframes HDownPhoneBaba {
+    0%{transform: translate(3*$keyPhone, $lettersYup);}
+    100%{transform: translate(3*$keyPhone, $lettersYdownBaba);}}
+}
+
+@mixin animateLettersPiraci (){
+  @keyframes CDownPiraci {
     0%{transform: translate(-3*$keyDesktop, $lettersYup);}
     100%{transform: translate(-3*$keyDesktop, $lettersYdown);}}
 
-  @keyframes CDownTabPort {
+  @keyframes CDownTabPortPiraci {
     0%{transform: translate(-3*$keyTabPort, $lettersYup);}
     100%{transform: translate(-3*$keyTabPort, $lettersYdown);}}
 
-  @keyframes CDownPhone {
+  @keyframes CDownPhonePiraci {
     0%{transform: translate(-3*$keyPhone, $lettersYup);}
     100%{transform: translate(-3*$keyPhone, $lettersYdown);}}
 
-  @keyframes CDownPhoneLand {
-    0%{transform: translate(-3*$keyPhone, $lettersYup);}
-    100%{transform: translate(-3*$keyPhone, $lettersYdown*$phoneLandCoefficient);}}
-
-  @keyframes DDown {
+  @keyframes DDownPiraci {
     0%{transform: translate(-2*$keyDesktop, $lettersYup);}
     100%{transform: translate(-2*$keyDesktop, $lettersYdown);}}
 
-  @keyframes DDownTabPort {
+  @keyframes DDownTabPortPiraci {
     0%{transform: translate(-2*$keyTabPort, $lettersYup);}
     100%{transform: translate(-2*$keyTabPort, $lettersYdown);}}
 
-  @keyframes DDownPhone {
+  @keyframes DDownPhonePiraci {
     0%{transform: translate(-2*$keyPhone, $lettersYup);}
     100%{transform: translate(-2*$keyPhone, $lettersYdown);}}
 
-  @keyframes DDownPhoneLand {
-    0%{transform: translate(-2*$keyPhone, $lettersYup);}
-    100%{transform: translate(-2*$keyPhone, $lettersYdown*$phoneLandCoefficient);}}
-
-  @keyframes EDown {
+  @keyframes EDownPiraci {
     0%{transform: translate(-$keyDesktop, $lettersYup);}
     100%{transform: translate(-$keyDesktop, $lettersYdown);}}
 
-  @keyframes EDownTabPort {
+  @keyframes EDownTabPortPiraci {
     0%{transform: translate(-$keyTabPort, $lettersYup);}
     100%{transform: translate(-$keyTabPort, $lettersYdown);}}
 
-  @keyframes EDownPhone {
+  @keyframes EDownPhonePiraci {
     0%{transform: translate(-$keyPhone, $lettersYup);}
     100%{transform: translate(-$keyPhone, $lettersYdown);}}
 
-  @keyframes EDownPhoneLand {
-    0%{transform: translate(-$keyPhone, $lettersYup);}
-    100%{transform: translate(-$keyPhone, $lettersYdown*$phoneLandCoefficient);}}
-
-  @keyframes FDown {
+  @keyframes FDownPiraci {
     0%{transform: translate(0, $lettersYup);}
     100%{transform: translate(0, $lettersYdown);}}
 
-  @keyframes FDownTabPort {
+  @keyframes FDownTabPortPiraci {
     0%{transform: translate(0, $lettersYup);}
     100%{transform: translate(0, $lettersYdown);}}
 
-  @keyframes FDownPhone {
+  @keyframes FDownPhonePiraci {
     0%{transform: translate(0, $lettersYup);}
     100%{transform: translate(0, $lettersYdown);}}
 
-  @keyframes FDownPhoneLand {
-    0%{transform: translate(0, $lettersYup);}
-    100%{transform: translate(0, $lettersYdown*$phoneLandCoefficient);}}
-
-  @keyframes GDown {
+  @keyframes GDownPiraci {
     0%{transform: translate($keyDesktop, $lettersYup);}
     100%{transform: translate($keyDesktop, $lettersYdown);}}
 
-  @keyframes GDownTabPort {
+  @keyframes GDownTabPortPiraci {
     0%{transform: translate($keyTabPort, $lettersYup);}
     100%{transform: translate($keyTabPort, $lettersYdown);}}
 
-  @keyframes GDownPhone {
+  @keyframes GDownPhonePiraci {
     0%{transform: translate($keyPhone, $lettersYup);}
     100%{transform: translate($keyPhone, $lettersYdown);}}
 
-  @keyframes GDownPhoneLand {
-    0%{transform: translate($keyPhone, $lettersYup);}
-    100%{transform: translate($keyPhone, $lettersYdown*$phoneLandCoefficient);}}
-
-  @keyframes ADown {
+  @keyframes ADownPiraci {
     0%{transform: translate(2*$keyDesktop, $lettersYup);}
     100%{transform: translate(2*$keyDesktop, $lettersYdown);}}
 
-  @keyframes ADownTabPort {
+  @keyframes ADownTabPortPiraci {
     0%{transform: translate(2*$keyTabPort, $lettersYup);}
     100%{transform: translate(2*$keyTabPort, $lettersYdown);}}
 
-  @keyframes ADownPhone {
+  @keyframes ADownPhonePiraci {
     0%{transform: translate(2*$keyPhone, $lettersYup);}
     100%{transform: translate(2*$keyPhone, $lettersYdown);}}
 
-  @keyframes ADownPhoneLand {
-    0%{transform: translate(2*$keyPhone, $lettersYup);}
-    100%{transform: translate(2*$keyPhone, $lettersYdown*$phoneLandCoefficient);}}
-
-  @keyframes HDown {
+  @keyframes HDownPiraci {
     0%{transform: translate(3*$keyDesktop, $lettersYup);}
     100%{transform: translate(3*$keyDesktop, $lettersYdown);}}
 
-  @keyframes HDownTabPort {
+  @keyframes HDownTabPortPiraci {
     0%{transform: translate(3*$keyTabPort, $lettersYup);}
     100%{transform: translate(3*$keyTabPort, $lettersYdown);}}
 
-  @keyframes HDownPhone {
+  @keyframes HDownPhonePiraci {
     0%{transform: translate(3*$keyPhone, $lettersYup);}
     100%{transform: translate(3*$keyPhone, $lettersYdown);}}
+}
 
-  @keyframes HDownPhoneLand {
+@mixin animateLettersOld (){
+  @keyframes CDownOld {
+    0%{transform: translate(-3*$keyDesktop, $lettersYup);}
+    100%{transform: translate(-3*$keyDesktop, $lettersYdownOld);}}
+
+  @keyframes CDownTabPortOld {
+    0%{transform: translate(-3*$keyTabPort, $lettersYup);}
+    100%{transform: translate(-3*$keyTabPort, $lettersYdownOld);}}
+
+  @keyframes CDownPhoneOld {
+    0%{transform: translate(-3*$keyPhone, $lettersYup);}
+    100%{transform: translate(-3*$keyPhone, $lettersYdownOld);}}
+
+  @keyframes DDownOld {
+    0%{transform: translate(-2*$keyDesktop, $lettersYup);}
+    100%{transform: translate(-2*$keyDesktop, $lettersYdownOld);}}
+
+  @keyframes DDownTabPortOld {
+    0%{transform: translate(-2*$keyTabPort, $lettersYup);}
+    100%{transform: translate(-2*$keyTabPort, $lettersYdownOld);}}
+
+  @keyframes DDownPhoneOld {
+    0%{transform: translate(-2*$keyPhone, $lettersYup);}
+    100%{transform: translate(-2*$keyPhone, $lettersYdownOld);}}
+
+  @keyframes EDownOld {
+    0%{transform: translate(-$keyDesktop, $lettersYup);}
+    100%{transform: translate(-$keyDesktop, $lettersYdownOld);}}
+
+  @keyframes EDownTabPortOld {
+    0%{transform: translate(-$keyTabPort, $lettersYup);}
+    100%{transform: translate(-$keyTabPort, $lettersYdownOld);}}
+
+  @keyframes EDownPhoneOld {
+    0%{transform: translate(-$keyPhone, $lettersYup);}
+    100%{transform: translate(-$keyPhone, $lettersYdownOld);}}
+
+  @keyframes FDownOld {
+    0%{transform: translate(0, $lettersYup);}
+    100%{transform: translate(0, $lettersYdownOld);}}
+
+  @keyframes FDownTabPortOld {
+    0%{transform: translate(0, $lettersYup);}
+    100%{transform: translate(0, $lettersYdownOld);}}
+
+  @keyframes FDownPhoneOld {
+    0%{transform: translate(0, $lettersYup);}
+    100%{transform: translate(0, $lettersYdownOld);}}
+
+  @keyframes GDownOld {
+    0%{transform: translate($keyDesktop, $lettersYup);}
+    100%{transform: translate($keyDesktop, $lettersYdownOld);}}
+
+  @keyframes GDownTabPortOld {
+    0%{transform: translate($keyTabPort, $lettersYup);}
+    100%{transform: translate($keyTabPort, $lettersYdownOld);}}
+
+  @keyframes GDownPhoneOld {
+    0%{transform: translate($keyPhone, $lettersYup);}
+    100%{transform: translate($keyPhone, $lettersYdownOld);}}
+
+  @keyframes ADownOld {
+    0%{transform: translate(2*$keyDesktop, $lettersYup);}
+    100%{transform: translate(2*$keyDesktop, $lettersYdownOld);}}
+
+  @keyframes ADownTabPortOld {
+    0%{transform: translate(2*$keyTabPort, $lettersYup);}
+    100%{transform: translate(2*$keyTabPort, $lettersYdownOld);}}
+
+  @keyframes ADownPhoneOld {
+    0%{transform: translate(2*$keyPhone, $lettersYup);}
+    100%{transform: translate(2*$keyPhone, $lettersYdownOld);}}
+
+  @keyframes HDownOld {
+    0%{transform: translate(3*$keyDesktop, $lettersYup);}
+    100%{transform: translate(3*$keyDesktop, $lettersYdownOld);}}
+
+  @keyframes HDownTabPortOld {
+    0%{transform: translate(3*$keyTabPort, $lettersYup);}
+    100%{transform: translate(3*$keyTabPort, $lettersYdownOld);}}
+
+  @keyframes HDownPhoneOld {
     0%{transform: translate(3*$keyPhone, $lettersYup);}
-    100%{transform: translate(3*$keyPhone, $lettersYdown*$phoneLandCoefficient);}}
+    100%{transform: translate(3*$keyPhone, $lettersYdownOld);}}
 }
