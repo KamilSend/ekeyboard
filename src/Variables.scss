@@ -19,10 +19,11 @@ $keyDesktop:5vw;
 $keyTabPort:10vw;
 $keyPhone:12vw;
 $phoneLandCoefficient:1;
+$lettersYdown:190vh;
 
 
 
-@mixin animateLetters ($lettersYdown){
+@mixin animateLetters (){
   @keyframes CDown {
     0%{transform: translate(-3*$keyDesktop, $lettersYup);}
     100%{transform: translate(-3*$keyDesktop, $lettersYdown);}}
