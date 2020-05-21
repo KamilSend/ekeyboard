@@ -1,9 +1,5 @@
 @import "../Variables.scss";
 
-//$base-color: #c6538c;
-$lettersYup:-34vh;
-//$lettersYdown:140vh;
-
 .animationLettersWrapper{
   display: flex;
   flex-direction: column-reverse;
@@ -18,71 +14,141 @@ $lettersYup:-34vh;
   padding:1vh;
   margin:0;
   line-height: 4vh;
-}
-
-.C{
-  //transform: translate(-15vw, $lettersYup);
-  animation-name: CDown;
   animation-timing-function: linear;
-  @include respond(tab-port){animation-name: CDownTabPort;}
-  @include respond(phone){animation-name: CDownPhone;}
-  //@include respond(phone-land){animation-name: CDownPhoneLand;}
 }
 
-.D{
-  //transform: translate(-10vw, $lettersYup);
-  animation-name: DDown;
-  animation-timing-function: linear;
-  @include respond(tab-port){animation-name: DDownTabPort;}
-  @include respond(phone){animation-name: DDownPhone;}
-  //@include respond(phone-land){animation-name: DDownPhoneLand;}
+//Piraci z karaibów animation--------------------------------------------------------------------
+.C.piraci{
+  animation-name: CDownPiraci;
+  @include respond(tab-port){animation-name: CDownTabPortPiraci;}
+  @include respond(phone){animation-name: CDownPhonePiraci;}
 }
 
-.E{
-  //transform: translate(-5vw, $lettersYup);
-  animation-name: EDown;
-  animation-timing-function: linear;
-  @include respond(tab-port){animation-name: EDownTabPort;}
-  @include respond(phone){animation-name: EDownPhone;}
-  //@include respond(phone-land){animation-name: EDownPhoneLand;}
+.D.piraci{
+  animation-name: DDownPiraci;
+  @include respond(tab-port){animation-name: DDownTabPortPiraci;}
+  @include respond(phone){animation-name: DDownPhonePiraci;}
 }
 
-.F{
-  //transform: translate(0, $lettersYup);
-  animation-name: FDown;
-  animation-timing-function: linear;
-  @include respond(tab-port){animation-name: FDownTabPort;}
-  @include respond(phone){animation-name: FDownPhone;}
-  //@include respond(phone-land){animation-name: FDownPhoneLand;}
+.E.piraci{
+  animation-name: EDownPiraci;
+  @include respond(tab-port){animation-name: EDownTabPortPiraci;}
+  @include respond(phone){animation-name: EDownPhonePiraci;}
 }
 
-.G{
-  //transform: translate(5vw, $lettersYup);
-  animation-name: GDown;
-  animation-timing-function: linear;
-  @include respond(tab-port){animation-name: GDownTabPort;}
-  @include respond(phone){animation-name: GDownPhone;}
-  //@include respond(phone-land){animation-name: GDownPhoneLand;}
+.F.piraci{
+  animation-name: FDownPiraci;
+  @include respond(tab-port){animation-name: FDownTabPortPiraci;}
+  @include respond(phone){animation-name: FDownPhonePiraci;}
 }
 
-.A{
-  //transform: translate(10vw, $lettersYup);
-  animation-name: ADown;
-  animation-timing-function: linear;
-  @include respond(tab-port){animation-name: ADownTabPort;}
-  @include respond(phone){animation-name: ADownPhone;}
-  //@include respond(phone-land){animation-name: ADownPhoneLand;}
+.G.piraci{
+  animation-name: GDownPiraci;
+  @include respond(tab-port){animation-name: GDownTabPortPiraci;}
+  @include respond(phone){animation-name: GDownPhonePiraci;}
 }
 
-.H{
-  //transform: translate(15vw, $lettersYup);
-  animation-name: HDown;
-  animation-timing-function: linear;
-  @include respond(tab-port){animation-name: HDownTabPort;}
-  @include respond(phone){animation-name: HDownPhone;}
-  //@include respond(phone-land){animation-name: HDownPhoneLand;}
+.A.piraci{
+  animation-name: ADownPiraci;
+  @include respond(tab-port){animation-name: ADownTabPortPiraci;}
+  @include respond(phone){animation-name: ADownPhonePiraci;}
+}
+
+.H.piraci{
+  animation-name: HDownPiraci;
+  @include respond(tab-port){animation-name: HDownTabPortPiraci;}
+  @include respond(phone){animation-name: HDownPhonePiraci;}
+}
+
+//Old McDonald animation------------------------------------------------------------------------
+.C.old{
+  animation-name: CDownOld;
+  @include respond(tab-port){animation-name: CDownTabPortOld;}
+  @include respond(phone){animation-name: CDownPhoneOld;}
+}
+
+.D.old{
+  animation-name: DDownOld;
+  @include respond(tab-port){animation-name: DDownTabPortOld;}
+  @include respond(phone){animation-name: DDownPhoneOld;}
+}
+
+.E.old{
+  animation-name: EDownOld;
+  @include respond(tab-port){animation-name: EDownTabPortOld;}
+  @include respond(phone){animation-name: EDownPhoneOld;}
+}
+
+.F.old{
+  animation-name: FDownOld;
+  @include respond(tab-port){animation-name: FDownTabPortOld;}
+  @include respond(phone){animation-name: FDownPhoneOld;}
+}
+
+.G.old{
+  animation-name: GDownOld;
+  @include respond(tab-port){animation-name: GDownTabPortOld;}
+  @include respond(phone){animation-name: GDownPhoneOld;}
+}
+
+.A.old{
+  animation-name: ADownOld;
+  @include respond(tab-port){animation-name: ADownTabPortOld;}
+  @include respond(phone){animation-name: ADownPhoneOld;}
+}
+
+.H.old{
+  animation-name: HDownOld;
+  @include respond(tab-port){animation-name: HDownTabPortOld;}
+  @include respond(phone){animation-name: HDownPhoneOld;}
+}
+
+//Miała baba koguta animation------------------------------------------------------------------------
+.C.baba{
+  animation-name: CDownOld;
+  @include respond(tab-port){animation-name: CDownTabPortOld;}
+  @include respond(phone){animation-name: CDownPhoneOld;}
+}
+
+.D.baba{
+  animation-name: DDownOld;
+  @include respond(tab-port){animation-name: DDownTabPortOld;}
+  @include respond(phone){animation-name: DDownPhoneOld;}
+}
+
+.E.baba{
+  animation-name: EDownOld;
+  @include respond(tab-port){animation-name: EDownTabPortOld;}
+  @include respond(phone){animation-name: EDownPhoneOld;}
+}
+
+.F.baba{
+  animation-name: FDownOld;
+  @include respond(tab-port){animation-name: FDownTabPortOld;}
+  @include respond(phone){animation-name: FDownPhoneOld;}
+}
+
+.G.baba{
+  animation-name: GDownOld;
+  @include respond(tab-port){animation-name: GDownTabPortOld;}
+  @include respond(phone){animation-name: GDownPhoneOld;}
+}
+
+.A.baba{
+  animation-name: ADownOld;
+  @include respond(tab-port){animation-name: ADownTabPortOld;}
+  @include respond(phone){animation-name: ADownPhoneOld;}
+}
+
+.H.baba{
+  animation-name: HDownOld;
+  @include respond(tab-port){animation-name: HDownTabPortOld;}
+  @include respond(phone){animation-name: HDownPhoneOld;}
 }
 
 
-@include animateLetters()
+@include animateLettersBaba ()
+@include animateLettersPiraci()
+@include animateLettersOld()
+
 

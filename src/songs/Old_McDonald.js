@@ -1,5 +1,4 @@
 import React from 'react'
-import './Old_McDonald.scss'
 
 const Old_McDonald = () => {
 

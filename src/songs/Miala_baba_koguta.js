@@ -1,5 +1,4 @@
 import React from 'react'
-import './Miala_baba_koguta.scss'
 
 const Miala_baba_koguta = () => {
 
