@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bdbc7ac43e82e8bb032e024d9a46a16d",
+    "revision": "a2f3fdbf42e7135b1d4e92f074673c9b",
     "url": "/ekeyboard/index.html"
   },
   {
-    "revision": "fd87da216c0b03fd31dc",
-    "url": "/ekeyboard/static/css/main.9a43ea5c.chunk.css"
+    "revision": "a84a2b67a026b94a0cf3",
+    "url": "/ekeyboard/static/css/main.ef90ec05.chunk.css"
   },
   {
     "revision": "6b599ff091f726022865",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ekeyboard/static/js/2.434d71a1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "fd87da216c0b03fd31dc",
-    "url": "/ekeyboard/static/js/main.dbe96939.chunk.js"
+    "revision": "a84a2b67a026b94a0cf3",
+    "url": "/ekeyboard/static/js/main.8cba218d.chunk.js"
   },
   {
     "revision": "9a90d47f0da1f85d8540",
