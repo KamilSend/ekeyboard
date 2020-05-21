@@ -119,8 +119,10 @@
 }
 
 .navButton{
-  min-width:140px;
-  position: absolute;
+  min-width:155px;
+  min-height: 40px;
+  position: relative;
+  box-sizing: border-box;
 
   @include respond (phone){
     min-width:95px;
