@@ -10,7 +10,11 @@ nav.main{
     justify-content: space-around;
 
     li{
-      padding: 10px 0 10px 0;
+      padding: 10px 0 5px 0;
+
+      @include respond (phone-land-narrow){
+        padding: 5px 0 5px 0;
+      }
 
       a{
         display: flex;
@@ -19,6 +23,7 @@ nav.main{
         text-decoration: none;
         color:black;
         padding:5px;
+        margin:0;
       }
     }
   }

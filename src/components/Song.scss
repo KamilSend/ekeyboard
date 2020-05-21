@@ -8,6 +8,17 @@
   height: 35vh;
   overflow: hidden;
   font-size:5vh;
+  background-color: coral;
+
+  @include respond (phone){
+    max-height:40vh;
+    min-height: 40vh
+  }
+
+  @include respond (phone-land){
+    max-height:30vh;
+    min-height: 30vh
+  }
 }
 
 .animationLetter{
