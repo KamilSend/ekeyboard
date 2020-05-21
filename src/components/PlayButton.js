@@ -6,6 +6,7 @@ import VelocityUp from "./VelocityUp";
 import VelocityDown from "./VelocityDown";
 import sass from '../Variables.scss'
 import '../App.scss';
+import {BrowserRouter} from "react-router-dom";
 
 class PlayButton extends React.Component{
 
@@ -116,6 +117,7 @@ class PlayButton extends React.Component{
     render(){
         return(
             <>
+
                 <Songs handleNavLinkClick={this.handleNavLinkClick}/>
                 {this.state.active?<Song play={this.state.active}/>:null}
 

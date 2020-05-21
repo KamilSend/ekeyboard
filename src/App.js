@@ -4,6 +4,7 @@ import PianoKeys from './components/PianoKeys'
 import {BrowserRouter} from 'react-router-dom';
 import PlayButton from './components/PlayButton'
 import ChangeKeyboard from './components/ChangeKeyboard'
+import Background from "./assets/images/piano.png";
 
 import UIfx from 'uifx'
 import c from './assets/sound/C.wav'
@@ -118,7 +119,9 @@ class App extends React.Component{
 
         return (
              <BrowserRouter basename={process.env.PUBLIC_URL}>
-                <div className="App" onKeyPress={this.handleKeyPress} onKeyUp={this.handleKeyUp}>
+                 <img src={Background} alt="kitchen" className="backgroundImg"/>
+
+                 <div className="App" onKeyPress={this.handleKeyPress} onKeyUp={this.handleKeyUp}>
                     <div className="keyboard" >
                         <PianoKeys handleClick={this.handleClick} alt={this.state.alt}
                                    buttonPressed={this.state.buttonPressed}/>

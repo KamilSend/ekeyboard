@@ -120,6 +120,7 @@
 
 .navButton{
   min-width:140px;
+  position: absolute;
 
   @include respond (phone){
     min-width:95px;

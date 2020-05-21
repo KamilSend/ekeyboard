@@ -6,6 +6,16 @@ html,body,ul, ul,a{
   padding:0;
 }
 
+.app{
+  position: fixed;
+  left:0;
+  top:0;
+  height: 100vh;
+  width:100vw;
+  object-fit: cover;
+  z-index:-1;
+}
+
 .keyboard{
   position:absolute;
   //left:50%;
@@ -31,6 +41,16 @@ html,body,ul, ul,a{
   .letter{
     letter-spacing: 5px;
   }
+}
+
+.backgroundImg{
+  position: fixed;
+  left:0;
+  top:0;
+  height: 100vh;
+  width:90vw;
+  object-fit: cover;
+  opacity:0.15;
 }
 
 
