@@ -19,26 +19,26 @@ const config = {
     throttleMs: 100}
 
 const sounds = [
-    {id:"c", altid:"s", sound:new UIfx(c, config)},
-    {id:"d", altid:"d", sound:new UIfx(d, config)},
-    {id:"e", altid:"f", sound:new UIfx(e, config)},
-    {id:"f", altid:"g", sound:new UIfx(f, config)},
-    {id:"g", altid:"h", sound:new UIfx(g, config)},
-    {id:"a", altid:"j", sound:new UIfx(a, config)},
-    {id:"h", altid:"k", sound:new UIfx(h, config)},
+    {id:"c", upperId:"C", altid:"s", upperAltid:"S", sound:new UIfx(c, config)},
+    {id:"d", upperId:"D", altid:"d", upperAltid:"D", sound:new UIfx(d, config)},
+    {id:"e", upperId:"E", altid:"f", upperAltid:"F", sound:new UIfx(e, config)},
+    {id:"f", upperId:"F", altid:"g", upperAltid:"G", sound:new UIfx(f, config)},
+    {id:"g", upperId:"G", altid:"h", upperAltid:"H", sound:new UIfx(g, config)},
+    {id:"a", upperId:"A", altid:"j", upperAltid:"J", sound:new UIfx(a, config)},
+    {id:"h", upperId:"H", altid:"k", upperAltid:"K", sound:new UIfx(h, config)},
 ]
 
 class App extends React.Component{
 
     state = {
         buttonPressed:[
-            {id:"0", value:"c", altvalue:"s", pressed:false},
-            {id:"1", value:"d", altvalue:"d", pressed:false},
-            {id:"2", value:"e", altvalue:"f", pressed:false},
-            {id:"3", value:"f", altvalue:"g", pressed:false},
-            {id:"4", value:"g", altvalue:"h", pressed:false},
-            {id:"5", value:"a", altvalue:"j", pressed:false},
-            {id:"6", value:"h", altvalue:"k", pressed:false},
+            {id:"0", value:"c", upperValue:"C", altvalue:"s", upperAltvalue:"S", pressed:false},
+            {id:"1", value:"d", upperValue:"D", altvalue:"d", upperAltvalue:"D", pressed:false},
+            {id:"2", value:"e", upperValue:"E", altvalue:"f", upperAltvalue:"F", pressed:false},
+            {id:"3", value:"f", upperValue:"F", altvalue:"g", upperAltvalue:"G", pressed:false},
+            {id:"4", value:"g", upperValue:"G", altvalue:"h", upperAltvalue:"H", pressed:false},
+            {id:"5", value:"a", upperValue:"A", altvalue:"j", upperAltvalue:"J", pressed:false},
+            {id:"6", value:"h", upperValue:"H", altvalue:"k", upperAltvalue:"K", pressed:false},
         ],
         alt: true,
     }
@@ -54,41 +54,37 @@ class App extends React.Component{
         })
     }
 
-    //NEED TO CHANGE THIS TO WORK WITH ALTERNATIVE KEYBOARD
     //Play sound on key press
     handleKeyPress = (event) => {
-        sounds.forEach(beep => {
-            if (event.key === beep.id && !this.state.alt) {
+            sounds.forEach(beep => {
+            if ((event.key === beep.id || event.key === beep.upperId) && !this.state.alt) {
                 beep.sound.play()
-            }else if (event.key === beep.altid && this.state.alt){
+            }else if ((event.key === beep.altid || event.key === beep.upperAltid)&& this.state.alt){
                 beep.sound.play()
             }
         })
 
         //copy current state
         const buttonPressed = [...this.state.buttonPressed]
-        //another table to keep active buttons, it will be necessary to handle multiple keys in the future
+        //another table to keep active buttons, it's necessary to handle multiple keys in the future
         const buttonPressed2 =[]
-
-        //NEED TO CHANGE THIS TO WORK WITH ALTERNATIVE KEYBOARD
-        //dla każdego elementu w kopii stanu weź go i wrzuć do tablicy buttonpressed2 co jest
-        //tym samym co skopiowaniem jej więc nie czaje, a potem jeżeli wartość klawisza jest taka sama
-        //co wartość value czyli literki z tablicy, wciśnij graficznie klawisz
 
         buttonPressed.forEach(beep => {
             //clear pressed keys
-            beep = {id:beep.id, value:beep.value, altvalue:beep.altvalue, pressed:false}
+            beep = {id:beep.id, value:beep.value, upperValue:beep.upperValue, altvalue:beep.altvalue, upperAltvalue:beep.upperAltvalue, pressed:false}
             buttonPressed2.push(beep)
 
-            if (event.key === beep.value && !this.state.alt) {
-                let active = {id:beep.id, value:beep.value, altvalue:beep.altvalue, pressed:true}
+            if ((event.key === beep.value ||event.key === beep.upperValue)&& !this.state.alt) {
+                let active = {id:beep.id, value:beep.value, upperValue:beep.upperValue, altvalue:beep.altvalue, upperAltvalue:beep.upperAltvalue, pressed:true}
                 buttonPressed2[beep.id] = active
                 this.setState({
                     buttonPressed:buttonPressed2
                 })
             }
-            else if (event.key === beep.altvalue && this.state.alt) {
-                let active = {id:beep.id, value:beep.value,  altvalue:beep.altvalue, pressed:true}
+            else if ((event.key === beep.altvalue || event.key === beep.upperAltvalue) && this.state.alt) {
+                console.log("powinien sie wciskać")
+
+                let active = {id:beep.id, value:beep.value, upperValue:beep.upperValue, altvalue:beep.altvalue, upperAltvalue:beep.upperAltvalue, pressed:true}
                 buttonPressed2[beep.id] = active
                 this.setState({
                     buttonPressed:buttonPressed2
@@ -99,16 +95,15 @@ class App extends React.Component{
 
     handleKeyUp = () => {
 
-        //NEED TO CHANGE THIS TO WORK WITH ALTERNATIVE KEYBOARD
         this.setState({
             buttonPressed:[
-                {id:"0", value:"c", altvalue:"s", pressed:false},
-                {id:"1", value:"d", altvalue:"d", pressed:false},
-                {id:"2", value:"e", altvalue:"f", pressed:false},
-                {id:"3", value:"f", altvalue:"g", pressed:false},
-                {id:"4", value:"g", altvalue:"h", pressed:false},
-                {id:"5", value:"a", altvalue:"j", pressed:false},
-                {id:"6", value:"h", altvalue:"k", pressed:false},
+                {id:"0", value:"c", upperValue:"C", altvalue:"s", upperAltvalue:"S", pressed:false},
+                {id:"1", value:"d", upperValue:"D", altvalue:"d", upperAltvalue:"D", pressed:false},
+                {id:"2", value:"e", upperValue:"E", altvalue:"f", upperAltvalue:"F", pressed:false},
+                {id:"3", value:"f", upperValue:"F", altvalue:"g", upperAltvalue:"G", pressed:false},
+                {id:"4", value:"g", upperValue:"G", altvalue:"h", upperAltvalue:"H", pressed:false},
+                {id:"5", value:"a", upperValue:"A", altvalue:"j", upperAltvalue:"J", pressed:false},
+                {id:"6", value:"h", upperValue:"H", altvalue:"k", upperAltvalue:"K", pressed:false},
             ],
         })
     }
