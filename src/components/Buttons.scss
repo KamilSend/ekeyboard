@@ -37,7 +37,7 @@
 
 .velocityWrapper{
   position: absolute;
-  top:8vh;
+  top:10vh;
   left:2vh;
   display:flex;
   flex-direction: row;
@@ -46,7 +46,7 @@
   font-size: 18px;
 
   @include respond (phone){
-    font-size:14px;
+    font-size:12px;
     left:0.5vh;
   }
 }
@@ -86,7 +86,7 @@
   position: absolute;
   //top:40vh;
   //left:2vh;
-  top:8vh;
+  top:12vh;
   right:2vh;
   display:flex;
   flex-direction: column;
@@ -97,7 +97,7 @@
 
   @include respond (phone){
     font-size: 12px;
-    top:10vh;
+    top:12vh;
     right:0.5vh;
   }
 
@@ -115,6 +115,15 @@
   @include respond (phone){
     width:60px;
     height:40px;
+  }
+}
+
+.navButton{
+  min-width:140px;
+
+  @include respond (phone){
+    min-width:95px;
+    width:95px;
   }
 }
 

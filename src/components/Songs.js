@@ -11,7 +11,7 @@ const Songs = (props) => {
 
     const songMenu = list.map(item => (
         <li key={item.name}>
-            <NavLink onClick={props.handleNavLinkClick} to={item.path} exact={item.exact?item.exact:false}>{item.name}</NavLink>
+            <NavLink className="whiteButton navButton" onClick={props.handleNavLinkClick} to={item.path} exact={item.exact?item.exact:false}>{item.name}</NavLink>
         </li>
     ))
 
