@@ -5,6 +5,8 @@ import {BrowserRouter} from 'react-router-dom';
 import PlayButton from './components/PlayButton'
 import ChangeKeyboard from './components/ChangeKeyboard'
 import Background from "./assets/images/piano.png";
+import GoogleFontLoader from 'react-google-font-loader';
+
 
 import UIfx from 'uifx'
 import c from './assets/sound/C.wav'
@@ -119,6 +121,15 @@ class App extends React.Component{
 
         return (
              <BrowserRouter basename={process.env.PUBLIC_URL}>
+                 <GoogleFontLoader
+                     fonts={[
+                         {
+                             font: 'Lobster Two',
+                             weights: [400],
+                         },
+                     ]}
+                     subsets={['cyrillic-ext', 'greek']}
+                 />
                  <img src={Background} alt="kitchen" className="backgroundImg"/>
 
                  <div className="App" onKeyPress={this.handleKeyPress} onKeyUp={this.handleKeyUp}>

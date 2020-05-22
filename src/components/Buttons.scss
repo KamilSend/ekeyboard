@@ -1,5 +1,9 @@
 @import "../Variables.scss";
 
+body {
+  font-family: 'Courgette', cursive;
+}
+
 .PlayButton{
   position: absolute;
   min-width:15vw;
@@ -11,7 +15,6 @@
   font-size: 20px;
   letter-spacing: 2px;
   font-weight: bold;
-
   @include respond (phone){
     top:85%;
   }
@@ -37,7 +40,7 @@
 
 .velocityWrapper{
   position: absolute;
-  top:10vh;
+  top:13vh;
   left:2vh;
   display:flex;
   flex-direction: row;
@@ -48,6 +51,11 @@
   @include respond (phone){
     font-size:12px;
     left:0.5vh;
+  }
+
+  @include respond (phone-land){
+    top:17vh;
+    font-size:12px;
   }
 }
 
@@ -80,13 +88,17 @@
     height:35px;
     font-size:30px;
   }
+
+  @include respond (phone-land){
+    width:35px;
+    height:35px;
+    font-size:30px;
+  }
 }
 
 .changeKeyboardWrapper{
   position: absolute;
-  //top:40vh;
-  //left:2vh;
-  top:12vh;
+  top:15vh;
   right:2vh;
   display:flex;
   flex-direction: column;
@@ -97,8 +109,13 @@
 
   @include respond (phone){
     font-size: 12px;
-    top:12vh;
+    top:15vh;
     right:0.5vh;
+  }
+
+  @include respond (phone-land){
+    font-size: 12px;
+    top:20vh;
   }
 
 }
@@ -113,6 +130,11 @@
   margin-top:5px;
 
   @include respond (phone){
+    width:60px;
+    height:40px;
+  }
+
+  @include respond (phone-land){
     width:60px;
     height:40px;
   }

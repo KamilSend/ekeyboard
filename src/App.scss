@@ -6,6 +6,8 @@ html,body,ul, ul,a{
   padding:0;
 }
 
+
+
 .app{
   position: fixed;
   left:0;
@@ -32,6 +34,51 @@ html,body,ul, ul,a{
     top:65%;
   }
 }
+
+.KeyboardOverlay{
+  background-color: #f5f5f5;
+  min-width: 7*$keyDesktop;
+  width: 7*$keyDesktop;
+  min-height: calc(25vh + 10px);
+  text-align: center;
+  left:50%;
+  transform: translate(-50%, -50%);
+  opacity:.8;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding:15px;
+  box-sizing: border-box;
+  line-height: 2.5;
+  letter-spacing: 1.1px;
+  word-spacing: 1.2px;
+  font-size: 20px;
+  font-family: 'Lobster Two', cursive;
+
+  @include respond(tab-land){
+    line-height: 1.5;
+  }
+
+  @include respond(tab-port){
+    min-width: 7*$keyTabPort;
+    width: 7*$keyTabPort;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  @include respond(phone){
+    min-width: 7*$keyPhone;
+    width: 7*$keyPhone;
+  }
+
+  @include respond(phone-land){
+    min-height:calc(30vh + 10px);
+  }
+}
+
+
+
+
 
 .songContainer{
   display: flex;
