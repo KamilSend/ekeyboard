@@ -1,10 +1,10 @@
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
-    @media only screen and (max-width: 600px) { @content };
+    @media only screen and (max-width: 601px) { @content };
   }
 
   @if $breakpoint == phone-land {
-    @media only screen and (max-height: 450px) { @content };
+    @media only screen and (max-height: 450px) and (max-width: 601px){ @content };
   }
 
   @if $breakpoint == phone-land-narrow {
@@ -18,7 +18,6 @@
     @media only screen and (max-width: 1000px) { @content };
   }
 }
-
 $keyDesktop:5vw;
 $keyTabPort:10vw;
 $keyPhone:10.5vw;

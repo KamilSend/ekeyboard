@@ -1,9 +1,5 @@
 @import "../Variables.scss";
 
-body {
-  font-family: 'Courgette', cursive;
-}
-
 .PlayButton{
   position: absolute;
   min-width:15vw;
@@ -15,12 +11,15 @@ body {
   font-size: 20px;
   letter-spacing: 2px;
   font-weight: bold;
-  @include respond (phone){
+
+  @include respond (tab-land){
     top:85%;
   }
 
   @include respond (phone-land){
-    top:90%;
+    top:95%;
+    font-size: 16px;
+    min-height: 5vh;
   }
 }
 
@@ -36,6 +35,10 @@ body {
   &:active{
     border: 5px solid black;
   }
+}
+
+.active{
+  border: 5px solid black;
 }
 
 .velocityWrapper{

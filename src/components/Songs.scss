@@ -8,13 +8,18 @@ nav.main{
     display: flex;
     width:100%;
     justify-content: space-around;
+    height: 56px;
+
+    @include respond (phone){
+      height: 75px;
+    }
 
     li{
       padding: 10px 0 5px 0;
 
-      @include respond (phone-land-narrow){
-        padding: 5px 0 5px 0;
-      }
+      //@include respond (phone-land-narrow){
+      //  padding: 5px 0 5px 0;
+      //}
 
       a{
         font-family: 'Lobster Two', cursive;

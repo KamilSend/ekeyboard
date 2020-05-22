@@ -20,18 +20,13 @@ html,body,ul, ul,a{
 
 .keyboard{
   position:absolute;
-  //left:50%;
-  top:56%;
-  transform: translateY(-50%);
+  //56px is menu height
+  top: calc(56px + 35vh);
   width:100%;
   text-align: center;
 
   @include respond (phone){
-    top:65%;
-  }
-
-  @include respond (phone-land){
-    top:65%;
+    top: calc(75px + 40vh);
   }
 }
 
@@ -42,7 +37,7 @@ html,body,ul, ul,a{
   min-height: calc(25vh + 10px);
   text-align: center;
   left:50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   opacity:.8;
   display:flex;
   align-items: center;
