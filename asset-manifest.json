@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ekeyboard/static/css/main.c464e0d5.chunk.css",
+    "main.css": "/ekeyboard/static/css/main.b8c2b2ea.chunk.css",
     "main.js": "/ekeyboard/static/js/main.88902806.chunk.js",
     "main.js.map": "/ekeyboard/static/js/main.88902806.chunk.js.map",
     "runtime-main.js": "/ekeyboard/static/js/runtime-main.4cb8a62e.js",
@@ -8,9 +8,9 @@
     "static/js/2.60575648.chunk.js": "/ekeyboard/static/js/2.60575648.chunk.js",
     "static/js/2.60575648.chunk.js.map": "/ekeyboard/static/js/2.60575648.chunk.js.map",
     "index.html": "/ekeyboard/index.html",
-    "precache-manifest.3fde08611c513ba55c31dc8fbf6b091b.js": "/ekeyboard/precache-manifest.3fde08611c513ba55c31dc8fbf6b091b.js",
+    "precache-manifest.ec6855e301022153b52fa8af809d4562.js": "/ekeyboard/precache-manifest.ec6855e301022153b52fa8af809d4562.js",
     "service-worker.js": "/ekeyboard/service-worker.js",
-    "static/css/main.c464e0d5.chunk.css.map": "/ekeyboard/static/css/main.c464e0d5.chunk.css.map",
+    "static/css/main.b8c2b2ea.chunk.css.map": "/ekeyboard/static/css/main.b8c2b2ea.chunk.css.map",
     "static/js/2.60575648.chunk.js.LICENSE.txt": "/ekeyboard/static/js/2.60575648.chunk.js.LICENSE.txt",
     "static/media/A.wav": "/ekeyboard/static/media/A.e56a32f9.wav",
     "static/media/C.wav": "/ekeyboard/static/media/C.c797eb2d.wav",
@@ -24,7 +24,7 @@
   "entrypoints": [
     "static/js/runtime-main.4cb8a62e.js",
     "static/js/2.60575648.chunk.js",
-    "static/css/main.c464e0d5.chunk.css",
+    "static/css/main.b8c2b2ea.chunk.css",
     "static/js/main.88902806.chunk.js"
   ]
 }
