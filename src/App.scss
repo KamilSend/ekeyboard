@@ -66,14 +66,7 @@ html,body,ul, ul,a{
     width: 7*$keyPhone;
   }
 
-  @include respond(phone-land){
-    min-height:calc(30vh + 10px);
-  }
 }
-
-
-
-
 
 .songContainer{
   display: flex;
