@@ -12,12 +12,14 @@
   letter-spacing: 2px;
   font-weight: bold;
 
-  @include respond (phone){
+  @include respond (tab-land){
     top:85%;
   }
 
   @include respond (phone-land){
-    top:90%;
+    top:95%;
+    font-size: 16px;
+    min-height: 5vh;
   }
 }
 
@@ -35,9 +37,13 @@
   }
 }
 
+.active{
+  border: 5px solid black;
+}
+
 .velocityWrapper{
   position: absolute;
-  top:8vh;
+  top:13vh;
   left:2vh;
   display:flex;
   flex-direction: row;
@@ -46,8 +52,13 @@
   font-size: 18px;
 
   @include respond (phone){
-    font-size:14px;
+    font-size:12px;
     left:0.5vh;
+  }
+
+  @include respond (phone-land){
+    top:17vh;
+    font-size:12px;
   }
 }
 
@@ -80,13 +91,17 @@
     height:35px;
     font-size:30px;
   }
+
+  @include respond (phone-land){
+    width:35px;
+    height:35px;
+    font-size:30px;
+  }
 }
 
 .changeKeyboardWrapper{
   position: absolute;
-  //top:40vh;
-  //left:2vh;
-  top:8vh;
+  top:15vh;
   right:2vh;
   display:flex;
   flex-direction: column;
@@ -97,8 +112,13 @@
 
   @include respond (phone){
     font-size: 12px;
-    top:10vh;
+    top:15vh;
     right:0.5vh;
+  }
+
+  @include respond (phone-land){
+    font-size: 12px;
+    top:20vh;
   }
 
 }
@@ -115,6 +135,23 @@
   @include respond (phone){
     width:60px;
     height:40px;
+  }
+
+  @include respond (phone-land){
+    width:60px;
+    height:40px;
+  }
+}
+
+.navButton{
+  min-width:155px;
+  min-height: 40px;
+  position: relative;
+  box-sizing: border-box;
+
+  @include respond (phone){
+    min-width:95px;
+    width:95px;
   }
 }
 

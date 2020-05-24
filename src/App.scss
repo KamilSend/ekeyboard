@@ -6,21 +6,66 @@ html,body,ul, ul,a{
   padding:0;
 }
 
+
+
+.app{
+  position: fixed;
+  left:0;
+  top:0;
+  height: 100vh;
+  width:100vw;
+  object-fit: cover;
+  z-index:-1;
+}
+
 .keyboard{
   position:absolute;
-  //left:50%;
-  top:55%;
-  transform: translateY(-50%);
+  //56px is menu height
+  top: calc(56px + 35vh);
   width:100%;
   text-align: center;
 
   @include respond (phone){
-    top:65%;
+    top: calc(75px + 40vh);
+  }
+}
+
+.KeyboardOverlay{
+  background-color: #f5f5f5;
+  min-width: 7*$keyDesktop;
+  width: 7*$keyDesktop;
+  min-height: calc(25vh + 10px);
+  text-align: center;
+  left:50%;
+  transform: translateX(-50%);
+  opacity:.8;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding:15px;
+  box-sizing: border-box;
+  line-height: 2.5;
+  letter-spacing: 1.1px;
+  word-spacing: 1.2px;
+  font-size: 20px;
+  font-family: 'Lobster Two', cursive;
+
+  @include respond(tab-land){
+    line-height: 1.5;
   }
 
-  @include respond (phone-land){
-    top:65%;
+  @include respond(tab-port){
+    min-width: 7*$keyTabPort;
+    width: 7*$keyTabPort;
+    font-size: 16px;
+    line-height: 1.8;
   }
+
+  @include respond(phone){
+    min-width: 7*$keyPhone;
+    width: 7*$keyPhone;
+  }
+
 }
 
 .songContainer{
@@ -31,6 +76,16 @@ html,body,ul, ul,a{
   .letter{
     letter-spacing: 5px;
   }
+}
+
+.backgroundImg{
+  position: fixed;
+  left:0;
+  top:0;
+  height: 100vh;
+  width:90vw;
+  object-fit: cover;
+  opacity:0.15;
 }
 
 

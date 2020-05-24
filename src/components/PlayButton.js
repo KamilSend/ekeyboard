@@ -6,7 +6,7 @@ import VelocityUp from "./VelocityUp";
 import VelocityDown from "./VelocityDown";
 import sass from '../Variables.scss'
 import '../App.scss';
-
+import KeyboardOverlay from "./KeyboardOverlay";
 class PlayButton extends React.Component{
 
     state = {
@@ -37,7 +37,7 @@ class PlayButton extends React.Component{
         }else if (mySong==="Piraci_z_karaibow") {
             duration = sass.piraciDuration
         }else {
-            duration = 9000
+            duration = 3600000
         }
 
         //clearTimeout which might be set from click before
@@ -116,10 +116,13 @@ class PlayButton extends React.Component{
     render(){
         return(
             <>
+
                 <Songs handleNavLinkClick={this.handleNavLinkClick}/>
                 {this.state.active?<Song play={this.state.active}/>:null}
 
                 <button onClick={this.handlePlayClick} className="PlayButton whiteButton">{!this.state.active?'play':'stop'}</button>
+                {!this.state.active?<KeyboardOverlay/>:null}
+
                 <div className="velocityWrapper">
                     <div className="velocitySpanWrapper">
                         <span>S</span><br/>
