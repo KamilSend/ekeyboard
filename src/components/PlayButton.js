@@ -60,7 +60,7 @@ class PlayButton extends React.Component{
     }
     //change velocity, letters go 1s faster
     handleVelocityUpClick = () => {
-        if(this.state.velocity < 10){
+        if(this.state.velocity < 5){
             this.setState({
                 active: false,
                 baba: this.state.baba - 1000,
@@ -74,7 +74,7 @@ class PlayButton extends React.Component{
 
     //change velocity, letters go 1s slower
     handleVelocityDownClick = () => {
-        if(this.state.velocity > -9){
+        if(this.state.velocity > -5){
             this.setState({
                 active: false,
                 baba: this.state.baba + 1000,
