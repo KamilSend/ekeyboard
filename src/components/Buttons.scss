@@ -5,7 +5,7 @@
   min-width:15vw;
   min-height: 10vh;
   left:50%;
-  top:75%;
+  top:80%;
   transform: translate(-50%,-50%);
   text-transform: uppercase;
   font-size: 20px;
@@ -13,13 +13,18 @@
   font-weight: bold;
 
   @include respond (tab-land){
-    top:85%;
+    top:90%;
   }
 
   @include respond (phone-land){
-    top:95%;
+    top:94%;
     font-size: 16px;
     min-height: 5vh;
+  }
+
+  @include respond (phone-land-narrow){
+    font-size: 14px;
+    min-height: 4vh;
   }
 }
 
@@ -34,11 +39,17 @@
 
   &:active{
     border: 5px solid black;
+    @include respond (phone-land-narrow){
+      border: 4px solid black;
+    }
   }
 }
 
 .active{
   border: 5px solid black;
+  @include respond (phone-land-narrow){
+    border: 4px solid black;
+  }
 }
 
 .velocityWrapper{
@@ -58,6 +69,11 @@
 
   @include respond (phone-land){
     top:17vh;
+    font-size:12px;
+  }
+
+  @include respond (phone-land-narrow){
+    top:25vh;
     font-size:12px;
   }
 }
@@ -92,10 +108,22 @@
     font-size:30px;
   }
 
+  @include respond (phone-narrow){
+    width:28px;
+    height:28px;
+    font-size:24px;
+  }
+
   @include respond (phone-land){
     width:35px;
     height:35px;
     font-size:30px;
+  }
+
+  @include respond (phone-land-narrow){
+    width:30px;
+    height:30px;
+    font-size:26px;
   }
 }
 
@@ -116,9 +144,18 @@
     right:0.5vh;
   }
 
+  @include respond (phone-narrow){
+    font-size: 8px;
+  }
+
   @include respond (phone-land){
     font-size: 12px;
     top:20vh;
+  }
+
+  @include respond (phone-land-narrow){
+    top:27vh;
+    font-size: 11px;
   }
 
 }
@@ -137,9 +174,16 @@
     height:40px;
   }
 
-  @include respond (phone-land){
-    width:60px;
-    height:40px;
+  @include respond (phone-narrow){
+    width:35px;
+    height:35px;
+    font-size: 8px;
+
+  }
+
+  @include respond (phone-land-narrow){
+    width:50px;
+    height:35px;
   }
 }
 
@@ -152,6 +196,17 @@
   @include respond (phone){
     min-width:95px;
     width:95px;
+  }
+
+  @include respond(phone-land-narrow){
+    min-width:120px;
+    min-height: 30px;
+  }
+
+  @include respond(phone-narrow){
+    min-width:70px;
+    width:70px;
+    min-height: 30px;
   }
 }
 

@@ -1,7 +1,7 @@
 const currentURL='http://localhost:3000/ekeyboard'
 
 const viewports = ['ipad-2', 'iphone-3', 'iphone-5', 'iphone-6', 'iphone-6+', 'iphone-x', 'iphone-xr',
-'macbook-11', 'macbook-13', 'macbook-15', 'samsung-note9', 'samsung-s10']
+ 'macbook-11', 'macbook-13', 'macbook-15', 'samsung-note9', 'samsung-s10']
 
 describe('RWD tests', () => {
     it('Should check if letters are going nicely, and buttons are visible', () => {
@@ -15,6 +15,32 @@ describe('RWD tests', () => {
             cy.wait(1000)
             cy.screenshot(viewport)
         })
+
+        cy.viewport(500,250)
+        cy.wait(500)
+        cy.visit(currentURL)
+        cy.get(':nth-child(1) > .whiteButton').click()
+        cy.get('.PlayButton').click()
+        cy.wait(1000)
+        cy.screenshot('smallPhone')
+
+        viewports.forEach((viewport) => {
+            cy.viewport(viewport, 'landscape')
+            cy.wait(500)
+            cy.visit(currentURL)
+            cy.get(':nth-child(1) > .whiteButton').click()
+            cy.get('.PlayButton').click()
+            cy.wait(1000)
+            cy.screenshot(viewport+'landscape')
+        })
+
+        cy.viewport(250, 500)
+        cy.wait(500)
+        cy.visit(currentURL)
+        cy.get(':nth-child(1) > .whiteButton').click()
+        cy.get('.PlayButton').click()
+        cy.wait(1000)
+        cy.screenshot('smallPhoneLandscapre')
 
     })
 })

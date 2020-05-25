@@ -9,9 +9,18 @@ nav.main{
     width:100%;
     justify-content: space-around;
     height: 56px;
+    min-width: 250px;
 
     @include respond (phone){
       height: 75px;
+    }
+
+    @include respond (phone-narrow){
+      height: 63px;
+    }
+
+    @include respond (phone-land-narrow){
+      height: 49px;
     }
 
     li{
@@ -30,6 +39,16 @@ nav.main{
         color:black;
         padding:5px;
         margin:0;
+        font-size:16px;
+
+        @include respond (phone-land-narrow){
+          padding:3px;
+          font-size:14px;
+        }
+
+        @include respond(phone-narrow){
+          font-size: 11px;
+        }
       }
     }
   }
