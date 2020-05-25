@@ -85,7 +85,6 @@ class App extends React.Component{
                 })
             }
             else if ((event.key === beep.altvalue || event.key === beep.upperAltvalue) && this.state.alt) {
-                console.log("powinien sie wciskać")
 
                 let active = {id:beep.id, value:beep.value, upperValue:beep.upperValue, altvalue:beep.altvalue, upperAltvalue:beep.upperAltvalue, pressed:true}
                 buttonPressed2[beep.id] = active

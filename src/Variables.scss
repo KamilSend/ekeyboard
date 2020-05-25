@@ -3,12 +3,16 @@
     @media only screen and (max-width: 601px) { @content };
   }
 
+  @if $breakpoint == phone-narrow {
+    @media only screen and (max-width: 350px) { @content };
+  }
+
   @if $breakpoint == phone-land {
     @media only screen and (max-height: 450px) and (max-width: 601px){ @content };
   }
 
   @if $breakpoint == phone-land-narrow {
-    @media only screen and (max-height: 350px) { @content };
+    @media only screen and (max-height: 350px) and (max-width: 601px){ @content };
   }
 
   @if $breakpoint == tab-port {
