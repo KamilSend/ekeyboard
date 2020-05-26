@@ -1,7 +1,8 @@
-# eKeyboard
+# eKeyboard PWA
 Online keyboard created to help learning how to play real keyboard or piano.
 You can choose songs with letter notes, set the letters speed and keyboard type.
 
+To install eKeyboard on your device click add to home screen button.
 ## Getting started
 ### Prerequisites
 To run this project locally you need to have this software installed:
